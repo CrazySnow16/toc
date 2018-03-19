@@ -1,0 +1,171 @@
+header{
+    width: 100%;
+    background:url(../../image/persol-center/centerbg.png)no-repeat ;
+    background-size:100% 100%;
+    overflow: hidden;
+}
+body{
+	background: #F7F7F7 ;
+}
+header>div{
+	width: 90%;
+	margin: 0 auto;
+}
+header>div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 0.17rem;
+    color: #FFFFFE;
+    font-weight: bold;
+    margin-top: 0.1rem;
+}
+header>div:first-child>img{
+    position: absolute;
+    width: 3%;
+}
+header>div:first-child>img:first-child{
+    left: 0.13rem;
+}
+header>div:first-child>img:last-child{
+    right: 0rem;
+    width: 6%;
+}
+header>div:nth-of-type(2){
+	font-size: 0.14rem;
+	color: #FFFFFf;
+
+    margin-top: 0.3rem;
+	display: flex;
+	flex-direction: row-reverse;
+}
+header>div:nth-of-type(3){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.16rem;
+	margin-top: 0.3rem;
+	position: relative;
+}
+header>div:nth-of-type(3)>div{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.15rem;
+}
+header>div:nth-of-type(3)>img{
+	width: 20%;
+}
+header>div:nth-of-type(3) span{
+	padding-right: 0.06rem;
+}
+.xingBie{
+	width: 5%;
+	padding-right: 0.05rem;
+}
+.dengJi2{
+	width: 5%;
+}
+header>div:nth-of-type(4){
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.15rem;
+	font-size: 0.14rem;
+}
+header>div:nth-of-type(4)>div{
+	display: flex;
+	flex-direction: column;
+	width: 33%;
+	align-items: center;
+	justify-content: center;
+}
+header>div:nth-of-type(4) img{
+	padding-bottom: 0.1rem;
+	width: 39%;
+}
+.xianji{
+	position: absolute;
+	top: 0.4rem;
+    left: 1.9rem;
+	width: 0.2rem !important;
+}
+header>div:nth-of-type(4){
+	width: 100%;
+}
+.nva{
+	margin-top: 0.04rem;
+}
+.nva>div{
+	width: 100%;
+	background: #FFFFFF;
+	margin-bottom: 0.01rem;
+}
+.nav_data{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.16rem;
+	align-items: center;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+}
+.bai{
+	height: 0.16rem;
+	background: #FFFFFF;
+	width: 100%;
+}
+.nav_data>div{
+	display: flex;
+	align-items: center;
+}
+.nav_data>div>span{
+	padding-left: 0.2rem;
+}
+.nav_data>div>img{
+	width: 28%;
+}
+.nav_data>img{
+	width: 3%;
+}
+/*签到显示页面*/
+.signshow{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	left: 0;
+	top: 0;
+	font-size: 0.18rem;
+	z-index: 9999999999;
+	justify-content: center;
+	align-items: center;
+}
+.signshow>div>div{
+	width: 2rem;
+	height: 2rem;
+	background: url(../../image/persol-center/add01.png)no-repeat;
+	background-size:cover ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.signshow>div>div>span{
+	color: #02C0A5;
+	display: block;
+	font-weight: bold;
+	margin-top:1.4rem;
+}
+.signshow>div>span{
+	width: 2rem;
+	line-height: 0.4rem;
+	text-align: center;
+		height: 0.4rem;
+	color: #FFFFFE;
+	background: #02C0A5;
+	border-radius: 30px;
+	display: block;
+	margin-top: 0.25rem;
+}

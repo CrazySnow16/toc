@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/sass/systemnotice.css"/>
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../js/bootstrap/css/bootstrap.css"/>
+		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<title>系统公告</title>
+	</head>
+	<body>
+		<div id="systemnotice">
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>系统公告</span>
+				<span></span>
+			</header>
+				
+				<!--搜索框-->
+			<div class="search">
+				<div>
+					<input type="text" placeholder="请输入搜索的关键字"  class="searchtext"/>
+					<span>|</span>
+					<span class="glyphicon glyphicon-search" onclick="search()"></span>
+				</div>
+			</div>
+			<!--公告内容-->
+			<div class="contant1">
+				<div class="leftbox">
+					<p>TOC(旅游币)将于2017年11月11日开启</p>
+					<p>2017年11月11日     <span>10：55</span></p>
+				</div>
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</div>
+			<div class="contant">
+				<div class="leftbox">
+					<p>TOC(旅游币)将于2017年11月11日开启</p>
+					<p>2017年11月11日     <span>10：55</span></p>
+				</div>
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</div>
+		
+		</div>
+	</body>
+	<script>
+	//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	    function search(){
+	    	if($(".searchtext").val("")!=""){
+	    		window.location.href="card.html"
+	    	}else{
+	    		alert("输入的内容不能为空")
+	    	}
+	    }
+	    $(".contant1,.contant").click(function(){
+	    		window.location.href="systemNotice1.html"
+	    	
+	    })
+	</script>
+</html>

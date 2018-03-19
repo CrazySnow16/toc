@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/Login/material.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<!--上传头像-->
+		<link rel="stylesheet" type="text/css" href="../../css/home/touxiang/clip.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/home/touxiang/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/home/touxiang/image-clip.css"/>
+		<!--js-->
+		<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../js/adaptationZ.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--头像-->
+		<script src="../../js/touxiang/exif.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/touxiang/fileinput.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/touxiang/image-clip.js" type="text/javascript" charset="utf-8"></script>
+		<title>Document</title>
+		<style type="text/css">
+			body {
+				background: #FFFFFF !important;
+			}
+			.touXiang{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				left: 0;
+				top: 0;
+				background: #000000;
+			}
+			#view{
+				background-size: 100% 100%;
+				background-repeat:no-repeat ;
+			}
+		</style>
+	</head>
+
+	<body>
+	<form onsubmit="return checkForm(this)" enctype="multipart/form-data" method="post" action="http://39.106.60.44/default/sss/zerg/public/index.php?s=/index/Login/inforMation">
+		<header>
+			<div>
+				<input type="submit" value="下一步" class="sub">
+			</div>
+		</header>
+		<div class="HI">
+			<div>
+				<span>HI，请完善您的基本信息</span>
+				<p>请填写正确信息，我们将保护您的个人隐私</p>
+			</div>
+		</div>
+		<div class="Head_portrait">
+			<div class="Head_portraitB">
+				<div id="view">
+				</div>
+				<div>
+					<p>上传符合您气质的头像吧~</p>
+					<span>点击头像上传</span>
+				</div>
+			</div>
+		</div>
+		<div id="form">
+			<div class="name ty">
+				<p>
+					<img src="../../image/用户@2x.png" />
+					<span>昵称</span>
+				</p>
+				<input class="nameuser" name="name" type="text" placeholder="请输入您的昵称（不超过12个字）" />
+			</div>
+			<div class="name ty">
+				<p>
+					<img src="../../image/用户@2x.png" />
+					<span>性别</span>
+				</p>
+				<input type="text" name="sex" id="showUserPicker" placeholder="请选择您的性别" />
+			</div>
+			<div class="name ty">
+				<p>
+					<img src="../../image/用户@2x.png" />
+					<span>邮箱</span>
+				</p>
+				<input type="email" name="email" class="email" placeholder="请输入您的邮箱地址" />
+			</div>
+			<div class="name ty">
+				<p>
+					<img src="../../image/用户@2x.png" />
+					<span>出生日期</span>
+				</p>
+				<input  type="text" name="birthday" id="riqi" data-options='{"type":"date"}' class="btn mui-btn mui-btn-block ui-alert" placeholder="请选择您的出生日期" />
+			</div>
+			<div class="name ty">
+				<p>
+					<img src="../../image/用户@2x.png" />
+					<span>个性签名</span>
+				</p>
+				<input type="text" name="autograph" class="autograph" placeholder="写下您的签名" />
+				<input type="text" name="userid" class="idUres" style="display: none">
+			</div>
+		</div>
+		<input type="text" name="file" id="file">
+	</form>
+	
+	<!--头像蒙版-->
+	<div class="touXiang" style="display: none;">
+	        <div class="clip-content">
+	            <div class="upload-container choose-gallery">
+	                <div class="upload-pretty button-three-dimen" style="z-index: 9999;">
+	                    <input type="file" id="targetImg" accept="image/*">本地上传
+	                </div>
+	            </div>
+	            <div class="upload-container choose-camera">
+	                <div class="upload-pretty button-three-dimen" style="top: 1rem;z-index: 10;">
+	                    <input type="file" id="targetImgCamera" capture="camera" accept="image/*">手机拍摄
+	                </div>
+	            </div>
+	
+	            <div class="img-clip" style="top: 1rem;"></div>
+	
+	            <nav class="clip-action nav-bar nav-bar-tab hidden">
+	                <a class="tab-item" id="btn-reload">
+	                    <span class="mui-icon mui-icon-arrowleft tab-icon"></span>
+	                    <span class="tab-label hidden">取消</span>
+	                </a>
+	                <a class="tab-item " id="btn-rotate-anticlockwise">
+	                    <span class="mui-icon mui-icon-refreshempty tab-icon rotate90"></span>
+	                    <span class="tab-label hidden">逆时针旋转</span>
+	                </a>
+	                <a class="tab-item " id="btn-rotate-clockwise">
+	                    <span class="mui-icon mui-icon-refreshempty tab-icon"></span>
+	                    <span class="tab-label hidden">顺时针旋转</span>
+	                </a>
+	                <a class="tab-item hidden" id="btn-maxrect">
+	                    <span class="mui-icon mui-icon-navigate tab-icon"></span>
+	                    <span class="tab-label hidden">最大选择</span>
+	                </a>
+	                <a class="tab-item" id="btn-verify">
+	                    <span class="mui-icon mui-icon-checkmarkempty tab-icon"></span>
+	                    <span class="tab-label hidden">确定</span>
+	                </a>
+	            </nav>
+	        </div>
+	
+	        <div class="show-content hidden">
+	            <div class="img-wrap">
+	                <img class="show-img" data-preview-src="" data-preview-group="2">
+	            </div>
+	
+	            <nav class="nav-bar nav-bar-tab">
+	                <a class="tab-item" id="btn-back">
+	                    <span class="mui-icon mui-icon-arrowleft tab-icon"></span>
+	                    <span class="tab-label hidden">取消</span>
+	                </a>
+	                <a class="tab-item" id="btn-detail">
+	                    <span class="mui-icon mui-icon-more-filled tab-icon"></span>
+	                    <span class="tab-label hidden">详情</span>
+	                </a>
+	                <a class="tab-item" id="btn-save">
+	                    <span class="mui-icon mui-icon-checkmarkempty tab-icon"></span>
+	                    <span class="tab-label hidden">确定</span>
+	                </a>
+	            </nav>
+	        </div>
+		</div>
+		<script src="../../js/http.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/nc.js"></script>
+		<script type="text/javascript">
+			//提交
+			function checkForm(obj) {
+               if (obj.file.value==""||obj.file.value==undefined){
+                    alert("请上传图片");
+                    obj.file.focus();
+                    return false;
+				}else if(obj.name.value == ""||obj.nama.value.length>12) {
+                    alert("名字合适有误！");
+                    obj.name.focus();
+                    return false;
+                } else if(obj.email.value==""){
+				 	alert("请输入正确的邮箱");
+                   obj.email.focus();
+                   return false;
+				}else if(obj.sex.value == ""){
+                    alert("请选择性别");
+                    obj.sex.focus();
+                    return false;
+				}else if(obj.birthday.value == ""){
+                    alert("请选择出生日期");
+                    obj.birthday.focus();
+                    return false;
+                }else {
+                   window.location.href = "../首页/home.html";
+                   return false;
+			   }
+
+            }
+			
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '男'
+					}, {
+						value: 'aaa',
+						text: '女'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							var xin = JSON.stringify(items[0].text)
+							showUserPickerButton.value = xin.substring(1, 2)
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+			(function($) {
+				$.init();
+				var result = $('#riqi');
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						var aa = document.getElementById("riqi");
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							var ri = JSON.stringify(rs.text);
+							aa.value = ri.substring(1, ri.length - 1);
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+			//上传头像
+			 var chooseGallery;
+            var chooseCamera;
+            var cropImage;
+            var imgData;
+            var clipContent;
+            var clipAction;
+            var showContent;
+            var showImg;
+            var targetImg;
+            var targetImgCamera;
+
+            initPage();
+
+            function initPage() {
+                initParams();
+                initListeners();
+                initImgClip();
+            }
+
+            function initParams() {
+                targetImg = document.querySelector('#targetImg');
+                targetImgCamera = document.querySelector('#targetImgCamera');
+                chooseGallery = document.querySelector('.choose-gallery');
+                chooseCamera = document.querySelector('.choose-camera');
+                clipContent = document.querySelector('.clip-content');
+                clipAction = document.querySelector('.clip-action');
+                showContent = document.querySelector('.show-content');
+                showImg = document.querySelector('.show-img');
+            }
+
+            function initImgClip() {
+                new FileInput({
+                    container: '#targetImg',
+                    isMulti: false,
+                    type: 'Image_Camera',
+                    success: function(b64, file, detail) {
+                        // console.log("选择:" + b64);
+                        console.log("fileName:" + file.name);
+
+                        loadImg(b64);
+                    },
+                    error: function(error) {
+                        console.error(error);
+                    }
+                });
+                new FileInput({
+                    container: '#targetImgCamera',
+                    isMulti: false,
+                    type: 'Camera',
+                    success: function(b64, file, detail) {
+                        // console.log("选择:" + b64);
+                        console.log("fileName:" + file.name);
+                        loadImg(b64);
+                    },
+                    error: function(error) {
+                        console.error(error);
+                    }
+                });
+            }
+
+            function loadImg(b64) {
+                changeImgClipShow(true);
+
+                var img = new Image();
+                img.src = b64;
+
+                img.onload = function() {
+                    EXIF.getData(img, function() {
+                        var orientation = EXIF.getTag(this, 'Orientation');
+                        
+                        cropImage && cropImage.destroy();
+                        cropImage = new ImageClip({
+                            container: '.img-clip',
+                            img,
+                            // 0代表按下才显示，1恒显示，-1不显示
+                            sizeTipsStyle: 0,
+                            // 为1一般是屏幕像素x2这个宽高
+                            // 最终的大小为：屏幕像素*屏幕像素比（手机中一般为2）*compressScaleRatio
+                            compressScaleRatio: 1.1,
+                            // iphone中是否继续放大：x*iphoneFixedRatio
+                            // 最好compressScaleRatio*iphoneFixedRatio不要超过2
+                            iphoneFixedRatio: 1.8,
+                            // 减去顶部间距，底部bar,以及显示间距
+                            maxCssHeight: window.innerHeight - 100 - 50 - 20,
+                            // 放大镜捕获的图像半径
+                            captureRadius: 30,
+                            // 是否采用原图像素（不会压缩）
+                            isUseOriginSize: false,
+                            // 增加最大宽度，增加后最大不会超过这个宽度
+                            maxWidth: 0,
+                            // 是否固定框高，优先级最大，设置后其余所有系数都无用直接使用这个固定的宽，高度自适应
+                            forceWidth: 0,
+                            // 同上，但是一般不建议设置，因为很可能会改变宽高比导致拉升，特殊场景下使用
+                            forceHeight: 0,
+                            // 压缩质量
+                            quality: 0.92,
+                            mime: 'image/jpeg',
+                        });
+
+                        // 6代表图片需要顺时针修复（默认逆时针处理了，所以需要顺过来修复）
+                        switch (orientation) {
+                            case 6:
+                                cropImage.rotate(true);
+                                break;
+                            default:
+                                break;
+                        }
+
+                    });
+                };
+            }
+            
+            function resizeShowImg(b64) {
+                var img = new Image();
+
+                img.src = b64;
+                img.onload = showImgOnload;
+            }
+
+            function showImgOnload() {
+                // 必须用一个新的图片加载，否则如果只用showImg的话永远都是第1张
+                // margin的话由于有样式，所以自动控制了
+                var width = this.width;
+                var height = this.height;
+                var wPerH = width / height;
+                var MAX_WIDTH = Math.min(window.innerWidth, width);
+                var MAX_HEIGHT = Math.min(window.innerHeight - 50 - 100, height);
+                var legalWidth = MAX_WIDTH;
+                var legalHeight = legalWidth / wPerH;
+
+                if (MAX_WIDTH && legalWidth > MAX_WIDTH) {
+                    legalWidth = MAX_WIDTH;
+                    legalHeight = legalWidth / wPerH;
+                }
+                if (MAX_HEIGHT && legalHeight > MAX_HEIGHT) {
+                    legalHeight = MAX_HEIGHT;
+                    legalWidth = legalHeight * wPerH;
+                }
+
+                var marginTop = (window.innerHeight - 50 - legalHeight) / 2;
+
+                showImg.style.marginTop = marginTop + 'px';
+                showImg.style.width = legalWidth + 'px';
+                showImg.style.height = legalHeight + 'px';
+            }
+
+            function changeImgClipShow(isClip) {
+                if (isClip) {
+                    chooseGallery.classList.add('hidden');
+                    chooseCamera.classList.add('hidden');
+                    clipAction.classList.remove('hidden');
+                } else {
+                    chooseGallery.classList.remove('hidden');
+                    chooseCamera.classList.remove('hidden');
+                    clipAction.classList.add('hidden');
+                    // 需要改变input，否则下一次无法change
+                    targetImg.value = '';
+                    targetImgCamera.value = '';
+                }
+            }
+
+            function initListeners() {
+                document.querySelector('#btn-reload').addEventListener('click', function() {
+                    cropImage && cropImage.destroy();
+                    changeImgClipShow(false);
+                });
+                document.querySelector('#btn-back').addEventListener('click', function() {
+                    changeContent(false);
+                });
+                document.querySelector('#btn-save').addEventListener('click', function() {
+                    // downloadFile(imgData);
+                    upload(function() {
+                        tips('上传成功');
+                    });
+                    $(".touXiang").css("display","none");
+                    $("#view").css("background-image","url("+imgData+")");
+                    $("#file").val(imgData)
+                });
+                document.querySelector('#btn-detail').addEventListener('click', function() {
+                    showImgDataLen(imgData);
+                });
+
+                document.querySelector('#btn-maxrect').addEventListener('click', function() {
+                    if (!cropImage) {
+                        tips('请选择图片');
+                        return;
+                    }
+                    cropImage.resetClipRect();
+                });
+
+                document.querySelector('#btn-rotate-anticlockwise').addEventListener('click', function() {
+                    if (!cropImage) {
+                        tips('请选择图片');
+                        return;
+                    }
+                    cropImage.rotate(false);
+                });
+
+                document.querySelector('#btn-rotate-clockwise').addEventListener('click', function() {
+                    if (!cropImage) {
+                        tips('请选择图片');
+                        return;
+                    }
+                    cropImage.rotate(true);
+                });
+
+                document.querySelector('#btn-verify').addEventListener('click', function() {
+                    if (!cropImage) {
+                        tips('请选择图片');
+                        return;
+                    }
+
+                    var isConfirm = confirm("是否裁剪图片并处理？");
+
+                    if (isConfirm) {
+                        cropImage.clip(false);
+                        imgData = cropImage.getClipImgData();
+                        recognizeImg(function() {
+                            changeContent(true);
+                        }, function(error) {
+                            tips(JSON.stringify(error), true);
+                        });
+                    }
+
+                });
+            }
+
+            function showImgDataLen(imgData) {
+                var len = imgData.length;
+                var sizeStr = len + 'B';
+
+                if (len > 1024 * 1024) {
+                    sizeStr = (Math.round(len / (1024 * 1024))).toString() + 'MB';
+                } else if (len > 1024) {
+                    sizeStr = (Math.round(len / 1024)).toString() + 'KB';
+                }
+
+                tips('处理后大小：' + sizeStr);
+            }
+
+            function tips(msg, isAlert) {
+                if (isAlert) {
+                    alert(msg);
+                } else {
+                    toast(msg);
+                }
+            }
+
+            function toast(message) {
+                var CLASS_ACTIVE = 'mui-active';
+                var duration = 2000;
+                var toastDiv = document.createElement('div');
+
+                toastDiv.classList.add('mui-toast-container');
+                toastDiv.innerHTML = `<div class="mui-toast-message">${message}</div>`;
+                toastDiv.addEventListener('webkitTransitionEnd', () => {
+                    if (!toastDiv.classList.contains(CLASS_ACTIVE)) {
+                        toastDiv.parentNode.removeChild(toastDiv);
+                        toastDiv = null;
+                    }
+                });
+                // 点击则自动消失
+                toastDiv.addEventListener('click', () => {
+                    toastDiv.parentNode.removeChild(toastDiv);
+                    toastDiv = null;
+                });
+                document.body.appendChild(toastDiv);
+                toastDiv.classList.add(CLASS_ACTIVE);
+                setTimeout(function() {
+                    toastDiv && toastDiv.classList.remove(CLASS_ACTIVE);
+                }, duration);
+            }
+
+            function changeContent(isShowContent) {
+                if (isShowContent) {
+                    showContent.classList.remove('hidden');
+                    clipContent.classList.add('hidden');
+
+                    resizeShowImg(imgData);
+                    showImg.src = imgData;
+
+                } else {
+                    showContent.classList.add('hidden');
+                    clipContent.classList.remove('hidden');
+                }
+            }
+
+            function b64ToBlob(urlData) {
+                var arr = urlData.split(',');
+                var mime = arr[0].match(/:(.*?);/)[1] || 'image/png';
+                // 去掉url的头，并转化为byte
+                var bytes = window.atob(arr[1]);
+
+                // 处理异常,将ascii码小于0的转换为大于0
+                var ab = new ArrayBuffer(bytes.length);
+                // 生成视图（直接针对内存）：8位无符号整数，长度1个字节
+                var ia = new Uint8Array(ab);
+                for (var i = 0; i < bytes.length; i++) {
+                    ia[i] = bytes.charCodeAt(i);
+                }
+
+                return new Blob([ab], {
+                    type: mime
+                });
+            }
+
+            function downloadFile(content) {
+                // Convert image to 'octet-stream' (Just a download, really)
+                var imageObj = content.replace("image/jpeg", "image/octet-stream");
+                window.location.href = imageObj;
+            }
+
+            function recognizeImg(success, error) {
+                // 里面正常有：裁边，摆正，梯形矫正，锐化等算法操作
+                success();
+            }
+
+            function upload(success, error) {
+                success();
+            }
+            $("#view").click(function(){
+            	$(".touXiang").css("display","block");
+            })
+		</script>
+	</body>
+
+</html>

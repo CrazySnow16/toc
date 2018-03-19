@@ -1,0 +1,170 @@
+body {
+	background: #11151E;
+}
+
+header {
+	width: 100%;
+	height: 0.4rem;
+	background: #1F2831;
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 0.18rem;
+	color: #FFFFFF;
+	justify-content: center;
+}
+
+header>img {
+	position: absolute;
+	left: 0.16rem;
+	width: 5%;
+	transform: rotateZ(90deg);
+}
+
+.menuBar {
+	width: 100%;
+	font-size: 0.15rem;
+	background: #1F2831;
+	padding-bottom: 0.1rem;
+	padding-top: 0.1rem;
+}
+
+.menuBar a {
+	color: #FFFFFF;
+}
+
+.caiDan {
+	width: 100%;
+}
+
+.menuBarColor {
+	color: #08A18C !important;
+}
+
+.caiDan .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.paiXu {
+	width: 100%;
+	color: #767877;
+	font-size: 0.12rem;
+	padding-top: 0.08rem;
+	padding-bottom: 0.05rem;
+}
+
+.sort_zuiXin {
+	width: 60%;
+	display: flex;
+	align-items: center;
+}
+
+.sort_zDf {
+	width: 40%;
+	display: flex;
+	align-items: center;
+}
+
+.sort>div {
+	width: 90%;
+	font-size: 0.12rem;
+	margin: 0 auto;
+	color: #6D6E6F;
+	display: flex;
+	align-items: center;
+}
+
+.sort_whole {
+	width: 40%;
+}
+
+.sort_ch {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 0.4rem;
+}
+
+.sort {
+	border-bottom: 1px solid #171E25;
+}
+
+.sort_zuiXin>div {
+	padding-right: 0.1rem;
+	border-right: 1px solid #0A0D11;
+	color: #088373;
+}
+
+.sort_zuiXin img {
+	width: 6%;
+	padding-left: 0.1rem;
+}
+
+.sort_zDf img {
+	width: 8%;
+	padding-left: 0.08rem;
+}
+
+.sort_zDf {
+	color: #088373;
+}
+
+.content {
+	width: 100%;
+	background: #18212A;
+	padding-bottom: 0.04rem;
+}
+
+.lists {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.itme {
+	width: 100%;
+}
+
+.code {
+	width: 100%;
+	font-size: 0.14rem;
+	color: #FFFFFF;
+	padding-top: 0.1rem;
+}
+
+.introduce {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.12rem;
+	margin-top: 0.1rem;
+}
+
+.introduce>div:first-child {
+	width: 0.5rem;
+	height: 0.5rem;
+	background: url(../../image/ou1.jpg)no-repeat;
+	background-size: contain;
+}
+
+.introduce>button {
+	width: 0.6rem;
+	height: 0.2rem;
+	background: #FE2035;
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+	border-radius: 2px;
+}
+
+.introduce>div:nth-of-type(3) {
+	color: #FE2035;
+}
+
+.introduce>div:nth-of-type(2) {
+	border: 1px solid #273749;
+	color: #273749;
+	padding: 0.02rem;
+}

@@ -1,0 +1,27 @@
+.system{
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+.award{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0.1rem;
+	border-bottom: 1px solid ghostwhite;
+}
+
+.award>h4{
+	margin-left: 0.1rem;
+	font-size: 0.18rem;
+}
+.award>p{
+	margin-top: 0.1rem;
+	color: #DCDCDC;
+	font-size: 0.12rem;
+	margin-right: 0.1rem;
+}
+.toc_contant{
+	margin: 0.2rem 0.1rem 0.1rem 0.1rem;
+	font-size: 0.16rem;
+}

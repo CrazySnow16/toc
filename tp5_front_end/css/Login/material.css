@@ -1,0 +1,149 @@
+header > div{
+	width: 80%;
+	margin: 0 auto;
+}
+.sub{
+	background: none !important;
+	border: none !important;
+	font-size: 0.16rem !important;
+	float: right;
+	padding: 0 !important;
+	line-height: 0.5rem;
+	color: #03BFA6 !important;
+}
+header{
+	width: 100%;
+	display: flex !important;
+	align-items: center;
+	height: 0.5rem;
+	box-shadow: 0 0.03rem 0.1rem #ebebeb;
+	font-size: 0.16rem;
+	font-weight: bold;
+}
+header a{
+	float: right;
+	color: #03bfa6;
+}
+#from{
+	padding-bottom: 0.1rem;
+}
+.HI{
+	width: 100%;
+	margin-top: 0.1rem;
+}
+.HI>div{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.HI>div>span{
+	font-size:0.23rem ;
+}
+.HI>div>p{
+	color: #9f9f9f;
+	font-size: 0.12rem;
+	padding-top: 0.1rem;
+	font-weight: bold;
+	letter-spacing: 0.02rem;
+}
+.Head_portrait{
+	width: 100%;
+	margin-top: 0.2rem;
+}
+.Head_portrait>div{
+	width: 85%;
+	margin: 0 auto;
+}
+.Head_portraitB{
+	display: flex;
+	align-items: center;
+}
+.Head_portraitB>div:first-child{
+	width: 0.8rem;
+    height: 0.8rem;
+	border-radius: 50%;
+	border: 1px solid;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#FFFFFF !important;
+
+}
+/*.Head_portraitB>div:first-child>img{*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*border: none;*/
+	/*object-fit: cover;*/
+/*}*/
+.Head_portraitB>div:last-child>p{
+	font-size: 0.16rem;
+}
+.Head_portraitB>div:last-child>span{
+	color: #b5b5b5;
+	font-size: 0.12rem;
+}
+.Head_portraitB>div:last-child{
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.25rem;
+}
+.Head_portraitB>div:last-child>p{
+	padding-bottom: 0.1rem;
+}
+
+.ty{
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.24rem;
+}
+.ty>p{
+	display: flex;
+}
+.ty img{
+	width: 0.2rem;
+	height: 0.2rem;
+}
+.ty span{
+	font-size: 0.16rem;
+	font-weight: bold;
+	padding-left: 0.2rem;
+}
+.ty>input{
+	font-size: 0.16rem;
+	display: block;
+	font-weight: bold;
+	border: none !important;
+	color: #A09F9F;
+	border-bottom: 1px solid #ccc !important;
+	text-indent: 0.3rem;
+	padding-bottom: 0.15rem;
+	text-align: left;
+}
+/*裁剪*/
+#clipArea{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	z-index: 999;
+}
+.o2o{
+	position: absolute;
+	bottom: 1rem;
+	left: 0.5rem;
+	width: 80%;
+}
+.upload_input{
+	float: left;
+	width: 30%;
+}
+#clipBtn{
+	float: right;
+}

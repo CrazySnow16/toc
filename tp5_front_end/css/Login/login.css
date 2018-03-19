@@ -1,0 +1,48 @@
+.bg_Login{
+	width: 100%;
+	height: 100%;
+	background: url(../image/组-1@2x.png)no-repeat;
+	background-size:100% 100%;
+	overflow: hidden;
+}
+.logo{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+	align-items: center;
+}
+.logo>img{
+	outline: 1px solid;
+	width: 1.5em;
+	height: 1.5rem;
+	object-fit: cover;
+}
+.logo>span{
+	font-size: 0.3rem;
+	padding-top: 0.5rem;
+	color: #a09f9f;
+}
+.but_logo{
+	width: 100%;
+	margin-top: 0.5rem;
+}
+.but_logo>button{
+	display: block;
+	width: 2.5rem;
+	height: 0.5rem;
+	background:#2ee2c9 ;
+	box-shadow: 0 0 0.2rem #b4fdf4;
+	font-size: 0.3rem;
+	margin: 0 auto;
+	outline: none;
+	border: 0;
+	border-radius: 0.3rem;
+}
+.but_logo>button:last-child{
+	margin-top: 0.15rem;
+}
+.but_logo a{
+	color: #FFFFFF;
+}

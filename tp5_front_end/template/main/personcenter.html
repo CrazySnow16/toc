@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/personcenter.css"/>
+		<link rel="stylesheet" href="../../css/footer.css">
+		<link rel="stylesheet" href="../../css/ty.css">
+		<script src="../../js/adaptationZ.js"></script>
+		<title>个人中心</title>
+	</head>
+	<body>
+		<!--个人中心-->
+		<header>
+			<div>
+				<img src="../../image/persol-center1/return.png"/>
+				<span>
+					个人中心
+				</span>
+				<img src="../../image/persol-center1/rwm.png"/>
+			</div>
+			<div>
+				<span onclick="signin()">签到</span>
+			</div>
+			<div>
+				<img src="../../image/persol-center1/cjnTou.png"/>
+				<div>
+					<span>扛把子奥术大师</span>
+					<img class="xingBie" src="../../image/persol-center1/xingBie.png"/>
+					<img class="dengJi2" src="../../image/dengJi2.png" alt="" />
+				</div>
+				<img src="../../image/persol-center1/xiangJi.png" class="xianji"/ >
+			</div>
+			<div>
+				<div>
+					<img src="../../image/persol-center1/Mzhanghu.png"/>
+					<span>我的账户</span>
+				</div>
+				<div>
+					<img src="../../image/persol-center1/Mxingquan.png"/>
+					<span>我的行权</span>
+				</div>
+				<div>
+					<img src="../../image/detailed_img.png" alt="" />
+					<span>手机充值</span>
+				</div>
+			</div>
+		</header>
+		<div class="bai">
+			
+		</div>
+		<div class="nva">
+			<div>
+				<div class="nav_data">
+					<div>
+						<img src="../../image/persol-center1/img_fengXiang.png"/>
+						<span>推广中心</span>
+					</div>
+					<img src="../../image/persol-center1/return_hui.png" alt="" />
+				</div>
+			</div>
+			<div>
+				<div class="nav_data">
+					<div>
+						<img src="../../image/persol-center1/img_kF.png"/>
+						<span>在线客服</span>
+					</div>
+					<img src="../../image/persol-center1/return_hui.png" alt="" />
+				</div>
+			</div>
+			<div>
+				<div class="nav_data">
+					<div>
+						<img src="../../image/persol-center1/img_xiTong.png"/>
+						<span>系统公告</span>
+					</div>
+					<img src="../../image/persol-center1/return_hui.png" alt="" />
+				</div>
+			</div>
+			<div>
+				<div class="nav_data">
+					<div>
+						<img src="../../image/persol-center1/img_sheZhi.png"/>
+						<span>设置中心</span>
+					</div>
+					<img src="../../image/persol-center1/return_hui.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<!--签到显示页面-->
+		<div class="signshow" style="display: none;">
+			<div>
+				<div>
+					<span>+0.1TOC</span>
+				</div>
+				<span onclick="affirm()">确认</span>
+			</div>
+		</div>
+		<div class="footer">
+			<footer>
+				<a href="../home.html">
+					<div>
+						<img src="../../image/footer_time.png" />
+						<span>TOC</span>
+					</div>
+				</a>
+				<a href="home.html">
+					<div>
+						<img src="../../image/footer_time.png" />
+						<span>时间</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="../../image/footer_broadcast.png" />
+						<span>直播</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="../../image/footer_city .png" />
+						<span>商城</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="../../image/footer_my.png" />
+						<span>我的</span>
+					</div>
+				</a>
+			</footer>
+		</div>
+	</body>
+	<script>
+		function signin(){
+			$(".signshow").css("display","flex")
+		}
+		function affirm(){
+			$(".signshow").css("display","none")
+		}
+		$(".personCenter").click(function(){
+			window.location.href='personData.html'; 
+		})
+		$(".extendCenter").click(function(){
+			window.location.href='extendCenter.html'; 
+		})
+		$(".setCenter").click(function(){
+		window.location.href="setCenter.html"
+		})
+	</script>
+</html>

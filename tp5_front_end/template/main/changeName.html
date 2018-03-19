@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/font-awesome/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<title>修改昵称</title>
+	</head>
+	<body>
+		<div id="changeName">
+		
+			<!--修改昵称-->
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>修改昵称</span>
+				<span class="iconfont iconfont-zhengque" ></span>
+			</header>
+			<div class="changeName_inp">
+				<input type="text" placeholder="请输入要修改的值"/>
+				<span class="iconfont iconfont-cuowu" id="cuowu"></span>
+			</div>
+		</div>
+	</body>
+	<script>
+
+		//返回上一级
+		$(".icon-fanhui").click(function(){
+			location.href=history.go(-1)
+		})
+//		正确跳转
+		$(".iconfont-zhengque").click(function(){
+			if($("input").val(" ")){
+				window.location.href="setCenter.html";
+			}
+		})
+		$("#cuowu").click(function(){
+			$("input").val("")
+		})
+		
+	</script>
+</html>

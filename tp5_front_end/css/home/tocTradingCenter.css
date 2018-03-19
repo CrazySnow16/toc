@@ -1,0 +1,381 @@
+body{
+	background: #12151E;
+}
+/*搜索订单*/
+.shuju{
+	width: 100%;
+}
+.box_seach{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #181F27;
+	height: 0.5rem;
+}
+.box_seach>input{
+	width: 80%;
+	border: none;
+	outline: none;
+	font-size: 0.16rem;
+	border-radius: 10px;
+	border: 1px solid #1F242B;
+	background: #11151E;
+	text-indent:15px;
+	padding-top: 0.04rem;
+	padding-bottom: 0.04rem;	
+}
+.box_data{
+	width: 100%;
+	margin-top: 0.01rem;
+}
+.boxDing{
+	width: 100%;
+	background: #181F27;
+}
+.boxDing>p{
+	width: 90%;
+	margin: 0 auto;
+	color: #455770;
+	font-size: 0.14rem;
+	padding-bottom: 0.03rem;
+	padding-top: 0.03rem;
+}
+.yongHu{
+	width: 100%;
+	background: #181C25;
+	padding-bottom: 0.3rem;
+	padding-top: 0.2rem;
+}
+.yongHu>div{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	height: 0.66rem;
+	align-items: center;
+}
+.dengNan>img{
+	width: 50%;
+}
+.dengNan{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    height: 100%;
+}
+.T_toux{
+	width: 0.6rem;
+	height: 0.6rem;
+	border: 1px solid #2B2E34;
+	background: url(../../image/0a1927bade086b5d4a6c1f58bd29376.png)no-repeat;
+	background-size:cover ;
+}
+.zongShu{
+	font-size: 0.16rem;
+	margin-left: -0.3rem;
+}
+.zongShu>div:first-child{
+	color: #0FB59E;
+}
+.zongShu>div:last-child{
+	color: #659009;
+}
+.zongShu>div:nth-of-type(2){
+	color: #B0B0B0;
+}
+.maiTa{
+	width: 0.8rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	
+}
+.maiTa>button{
+	width: 100%;
+	height: 0.4rem;
+	outline: none;
+	border: none;
+	background: #74A700;
+	color: #CDDFA5;
+	font-size: 0.18rem;	
+	border-radius: 2px;
+}
+
+
+/**/
+.TcHeader{
+	background: #202833;
+	color: #FFFFFF;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0.6rem;
+	font-size: 0.2rem;
+	font-weight: bold;
+}
+.TcHeader>img{
+	position: absolute;
+	left: 0.4rem;
+	transform: rotateZ(90deg);
+}
+.caoZuo{
+	color: white;
+	width: 100%;
+	background: #202833;
+}
+.caoZuo>ul{
+	padding-top: 0.05rem;
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.16rem;
+}
+.caoZuo li{
+}
+.luDiv{
+	width: 0.2rem;
+	background: #0DC2A9;
+	height: 0.04rem;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 0.06rem;
+}
+.luse{
+	color: #0DC2A9;
+}
+.scJi{
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 0.16rem;
+	padding-bottom: 0.15rem;
+	padding-top: 0.15rem;
+	border-bottom: 1px solid #1A202A;
+}
+.scJi>div{
+	width: 90%;
+	margin: 0 auto;
+}
+.left_form{
+	width: 54%;
+}
+#form{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 0.15rem;
+	display: flex;
+}
+.left_form>div>div:first-child{
+	display: flex;
+	height: 0.4rem;
+	align-items: center;
+}
+.jiaJian>div{
+	width: 25%;
+	color: #617B96;
+	background: #293646;
+	font-size: 0.16rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.jiaJian>input{
+	height: 100%;
+	width: 50%;
+	background: #0D1218;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #1B1E26;
+	border-top: 1px solid #1b1e26;
+	text-align: center;
+	font-size: 0.16rem;
+}
+.left_form>div>div:last-child{
+	font-size: 0.15rem;
+	color: #4C4D52;
+}
+.Total>button{
+	width: 100%;
+	border-radius: 2px;
+	font-size: 0.16rem;
+	background: #181F27;
+	border: 1px solid #1B1E26;
+	color: #363C48;
+	height: 100%;
+}
+.Total{
+	height: 0.4rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.Total>span{
+	font-size: 0.14rem;
+	color: #363C48;
+}
+.huHuanPass{
+	width: 100%;
+	border: 1px solid #1B1E26;
+	font-size: 0.16rem;
+	text-align: center;
+	color: #363C48;
+	height: 0.4rem;
+	background: #181F27;
+}
+.Total_sub{
+	width: 100%;
+	height: 0.4rem;
+	background: #74A700;
+	color: #FFFFFF;
+	font-size: 0.2rem;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 2px;
+	display: block;
+	margin-top: 0.03rem;
+}
+.right_form{
+	width: 46%;
+	display: flex;
+	flex-wrap:wrap;
+	font-size: 0.16rem;
+}
+.right_form>div{
+	padding-left: 0.2rem;
+	width: 100%;
+	margin-top: 0.05rem;
+}
+.right_form>div>span:last-child{
+	display: block;
+	width: 1rem;
+	padding-left: 0.04rem;
+}
+.right_form>div>span:first-child{
+	margin-bottom: 0.08rem;
+	display: block;
+}
+.keYong>span:first-child{
+	color: #B11C67;
+	display: block;
+}
+.keYong>span:last-child{
+	color: #B8ABB2;
+	background: #221727;
+}
+.keMai>span:first-child{
+	color: #637E28;
+}
+.keMai>span:last-child{
+	color: #B5B8AF;
+	background: #1D231F;
+}
+.sXf>span:first-child{
+	color: #F0B70F;
+}
+.sXf>span:last-child{
+	color:#BAB3A2 ;
+	background: #2A281C;
+}
+/*卖出*/
+.li3 .maiTa>button{
+	background: #A80019 !important;
+}
+
+/*历史*/
+.lishi>div:last-child{
+	display: flex;
+	justify-content: initial !important;
+}
+.right_lishi{
+	margin-left: 0.5rem;
+}
+.li4>div{
+	margin-top: 0.08rem;
+	background: #ffffff;
+}
+	/*缴单*/
+.li2{
+	width: 100%;
+	margin-top: 0.08rem;
+}
+.li2>div{
+	width: 100%;
+	margin: 0 auto;
+}
+.payment{
+	width: 100%;
+}
+.payment>div:first-child{
+	width: 100%;
+	padding-bottom: 0.05rem;
+	padding-top: 0.05rem;
+	border: 1px solid #FBFBFB;
+}
+.left_payment>span:last-child{
+	color: #BCBCBC;
+}
+.ddHao{
+	color: #B5B5B5;
+}
+.delHao{
+	color: red;
+}
+.left_payment{
+	display: flex;
+	flex-direction: column;
+}
+.payment>div:last-child{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	font-size: 0.14rem;
+	justify-content:space-between;
+}
+.right_payment>span:last-child{
+	color: #B5B5B5;
+}
+.right_payment{
+	display: flex;
+	flex-direction: column;
+}
+.piPei{
+	display: flex;
+	flex-direction: column-reverse;
+}
+.piPei>button{
+	width: 0.8rem;
+	outline: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 20px; ;
+	border: none;
+	height: 0.3rem;
+	background-color: #03BDA6;
+	color: #9FE2D8;
+	font-size: 0.18rem;
+	margin-top: 0.8rem;
+}
+.li2>div{
+	padding-bottom: 0.1rem;
+	background-color: #ffffff;
+}
+.din{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.14rem;
+}
+.bai{
+	background: #ffffff !important;
+	color: #000;
+}
+.body_bai{
+	background: #F7F7F7 !important;
+}

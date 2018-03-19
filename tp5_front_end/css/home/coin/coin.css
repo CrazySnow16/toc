@@ -1,0 +1,360 @@
+body{
+    background-color:#F7F7F7;
+}
+/*头部*/
+.TcHeader{
+    background: #202833;
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.6rem;
+    font-size: 0.2rem;
+    font-weight: bold;
+}
+.TcHeader>i:first-of-type{
+    position: absolute;
+    left: 0.4rem;
+}
+.TcHeader>i:last-of-type{
+    position: absolute;
+    right: 0.4rem;
+}
+.caoZuo{
+    color: white;
+    width: 100%;
+    background: #202833;
+}
+.caoZuo>ul{
+    padding-top: 0.05rem;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.16rem;
+}
+.luDiv{
+    width: 0.2rem;
+    background: #0DC2A9;
+    height: 0.04rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 0.06rem;
+}
+.luse{
+    color: #0DC2A9;
+}
+.acco{
+    background-color:#fff;
+    height: 0.4rem;
+}
+.p_left>span{
+    margin-top: 0.1rem;
+    position: absolute;
+    left:0.2rem;
+    font-size: 0.15rem;;
+}
+.p_right>span{
+    margin-top: 0.1rem;
+    position: absolute;
+    right:0.2rem;
+    font-size: 0.15rem;
+    color:rgb(2,188,165);
+}
+/*存入设置*/
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.work{
+    margin-top: 0.05rem;
+    background-color:#fff ;
+}
+.box{
+    padding-bottom: 0.1rem;
+    margin:0 0.1rem 0.1rem 0.1rem;
+    height: 1rem;
+    border-bottom:0.01rem solid #ccc;
+}
+.box:last-of-type{
+    margin:0 0.1rem 0.1rem 0.1rem;
+    height: 1rem;
+    border-bottom:0 solid #ccc;
+}
+.tally{
+    border-radius:0.05rem;
+    width: 0.8rem;
+    height: 0.2rem;
+    font-size: 0.15rem;
+    text-align: center;
+    color:rgb(2,188,165) ;
+    background-color: rgb(159,231,220);
+}
+.money{
+    padding-left: 0.2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.2rem;
+}
+.interest{
+    width: 40%;
+    position: absolute;
+    left:0.3rem;
+    padding-top: 0.2rem;
+}
+.inter{
+    position: absolute;
+    color: red;
+    font-size: 0.2rem;
+}
+.intere{
+    position: absolute;
+    right:0.2rem;
+    font-size: 0.2rem;
+}
+.intel{
+    position: absolute;
+    top: 0.5rem;
+    color: #ccc;
+    font-size: 0.15rem;
+}
+.intell{
+    position: absolute;
+    right:0.2rem;
+    top: 0.5rem;
+    color: #ccc;
+    font-size:0.15rem;
+}
+/*//xuanZhe*/
+.xuanZhe{
+    width: 100%;
+}
+.xuanZhe>div{
+    width: 90%;
+    height: 1rem;
+    margin: 0 auto;
+    border-bottom: 0.01rem  #c7c7cc solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.xuanZhe>div>div{
+    height: 100%;
+}
+.leiXing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.leiXing>span:first-child{
+    font-size: 0.14rem;
+    padding-left: 0.06rem;
+    padding-right: 0.05rem;
+    display: block;
+    border-radius: 6px;
+    color:#3DCCB8 ;
+    background-color:#9FE7DD;
+}
+.leiXing>span:nth-of-type(2){
+    font-size: 0.16rem;
+    color: red;
+    padding-top: 0.08rem;
+    padding-bottom: 0.08rem;
+}
+.leiXing>span:last-child{
+    font-size:  0.14rem;
+    color: #BFBFBF;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.time>span:first-child{
+    font-size: 0.15rem;
+    padding-top: 0.35rem;
+}
+.time>span:last-child{
+    font-size: 0.14rem;
+    color: #BFBFBF;
+}
+.button_niu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_niu>img {
+    width: 54%;
+}
+.butto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.3rem;
+    padding-bottom: 0.2rem;
+
+}
+.but{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 2rem;
+    height: 0.4rem;
+    border-radius: 1rem;
+    font-size: 0.2rem;
+    color: #fff;
+    background-color: rgb(2,188,165) ;
+}
+/*----------*/
+/*存入*/
+.keMai{
+    width: 100%;
+    background: #FFFFFF;
+    font-size: 0.14rem;
+    color: #A8A8A8;
+    margin-top: 0.06rem;
+    padding-top: 0.05rem;
+    margin-bottom: -0.04rem;
+    padding-bottom: 0.05rem;
+}
+.keMai>div{
+    width: 90%;
+    margin: 0 auto;
+}
+.box2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.dataNubll>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.boxx{
+    margin:0 0.2rem 0 0.2rem;
+    height: 0.8rem;
+}
+input{
+    font-size: 0.15rem;
+    border: none;
+}
+.convert{
+    color:rgb(2,188,165);
+    font-size: 0.15rem;
+}
+.convert>span{
+    padding-right:0.2rem ;
+}
+.verify{
+    display: flex;
+    align-items: center;
+    font-size: 0.15rem;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+
+}
+.verify>input{
+    width: 1.5rem;
+    padding-left: 0.3rem;
+    font-size: 0.15rem;
+}
+.law{
+    text-align: center;
+    font-size: 0.15rem;
+}
+.law>i{
+    color:rgb(2,188,165);
+    margin-right: 0.1rem;
+}
+.law>span{
+    color:rgb(2,188,165);}
+.subb{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 2rem;
+    height: 0.4rem;
+    border-radius: 30px;
+    font-size: 0.2rem;
+    color: #fff;
+    background-color: rgb(2,188,165) ;
+}
+/*买入*/
+.but2{
+
+}
+.workk{
+    margin-top: 0.1rem;
+    background-color:#fff ;
+    padding:0.05rem 0.2rem;
+}
+.price{
+    font-size: 0.15rem;
+}
+.price>span{
+    color: red;
+    margin-left: 0.1rem;
+    padding-left: 0.3rem;
+}
+/*卖出*/
+.verify p:first-of-type{
+    border-bottom:0.02rem solid #cccccc;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.05rem;
+}
+.workPass{
+    font-size: 0.15rem;
+    margin-bottom: 0.01rem;
+}
+.yzm{
+    width: 90%;
+    margin: 0 auto;
+    height: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.yzm>input{
+    width: 30%;
+}
+.hhmm>input{
+    padding-left: 0.3rem;
+}
+.hhmm{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 0.5rem;
+}
+.set{
+    right: 0.2rem;
+    width: 1rem;
+    font-size: 0.16rem;
+    height: 0.3rem;
+    background-color:rgb(2,188,165) ;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+}
+.hint{
+    padding-left: 0.2rem;
+    color: red;
+    padding-top: 0.05rem;
+    font-size: 0.1rem;
+}

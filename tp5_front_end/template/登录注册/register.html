@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="../../css/ty.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/Login/register.css" />
+	<title>TOC注册</title>
+	<style type="text/css">
+		.loading{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			background: #FFFFFF;
+			left: 0;
+		}
+		.loading>img{
+			position: absolute;
+			left: 0.3rem;
+			top: 2rem;
+			width: 2rem;
+		}
+	</style>
+</head>
+
+<body>
+<header>
+	<div>
+		<a href="login1.html"><img src="../../image/block_jt.png" /></a>
+	</div>
+</header>
+<div class="logo1">
+	<img src="../../image/ou1.jpg" />
+	<span>广告语</span>
+</div>
+<div id="form">
+	<div>
+		<img src="../../image/0a1927bade086b5d4a6c1f58bd29376.png" />
+		<input type="number" class="phone_number" placeholder="请输入您的手机号" value="" />
+	</div>
+	<div>
+		<img src="../../image/pass.png" />
+		<input type="password" placeholder="请输入您的密码" class="pass" />
+		<img src="../../image/ckpass.png" class="glasses" />
+	</div>
+	<div>
+		<img src="../../image/验证码@2x.png" />
+		<input type="text" placeholder="请输入您的验证码" class="verification_ma" />
+		<button class="Verification" onclick="yanzm()">验证码</button>
+	</div>
+	<div>
+		<img src="../../image/xc.png" />
+		<input type="text" placeholder="请输入您的邀请码" class="ivitation_ma" />
+	</div>
+	<input onclick="regular()" type="button" value="注册" class="submit" />
+</div>
+<div class="xieyi">
+	<p>我已经阅读并同意
+		<a href="">《网站服务协议》 </a>
+	</p>
+</div>
+
+<script src="../../js/adaptationZ.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/http.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //判断loading；
+    var loadimg = true;
+    var ivittationMa = $(".ivitation_ma").val();
+    //查看密码
+    $(".glasses").click(function() {
+        if($(".pass").attr("type") == "password") {
+            $(".pass").attr("type", "text");
+            $(".glasses").attr("src", "../image/chanPass.png")
+        } else if($(".pass").attr("type") == "text") {
+            $(".glasses").attr("src", "../image/ckpass.png");
+            $(".pass").attr("type", "password");
+        }
+    });
+    //验证码
+    function yanzm() {
+        var phone = $(".phone_number").val();
+        if(phone == '') {
+            alert("请输入手机号")
+        } else {
+            $.ajax({
+                type: "post",
+                url: http + "index.php?s=/index/Login/sendDo",
+                dataType: "json",
+                data: {
+                    Mobile: phone
+                },
+                success: function(data) {
+                    console.log(data);
+                    if(data != 200) {
+
+                        alert("验证码发送成功");
+                        var a = 60; //设置倒计时60秒
+                        var is = setInterval(function() {
+                            a--;
+                            $(".Verification").text(a);
+                            $(".Verification").attr("disabled", "disabled"); //倒计时按钮 禁用中
+                            if(a == 0) {
+                                clearInterval(is);
+                                $(".Verification").text("重新发送");
+                                $(".Verification").removeAttr("disabled"); //倒计时接受书
+                            }
+                        }, 1000)
+                    }
+                }
+            });
+        }
+    }
+    //正则验证
+    function regular(phone) {
+        console.log(phone)
+        var phoneNumber = $(".phone_number").val();
+        var pass = $(".pass").val();
+        var verificationMa = $(".verification_ma").val();
+        if(phoneNumber == "" || pass == "" || verificationMa == "") {
+            alert("请完善信息")
+        } else {
+            if(!(/^1[34578]\d{9}$/.test(phoneNumber))) {
+                alert("手机号不正确");
+            } else if(pass.length < 6 || pass.length > 16) {
+                alert("密码不能短于6位或者长于16位")
+            } else if(verificationMa == "") {
+                alert("验证码不能为空")
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: http + "index.php?s=/index/Login/userLanding",
+                    data: {
+                        username: phoneNumber,
+                        pwdshow: pass,
+                        verificationCode: verificationMa
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+                        loadimg = false;
+                        if(data.code != 200) {
+                            alert(data.msg)
+                        } else {
+                            alert(data.msg);
+                            location.href = "login1.html";
+                        }
+                    }
+                });
+            }
+        }
+    }
+    if(loadimg=false){
+        $(".loading").removeClass("addLoadIng")
+    }else{
+        $(".loading").addClass("addLoadIng")
+    }
+</script>
+</body>
+
+</html>

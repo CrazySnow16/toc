@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+#setPassword, #setCenter, #changeName, #extendCenter, #persondata, #commitList, #Myexercise, #phonemany, #systemnotice, #friendlist {
+  width: 100%;
+  height: 100%;
+  background: #F7F7F7; }
+  #setPassword header, #setCenter header, #changeName header, #extendCenter header, #persondata header, #commitList header, #Myexercise header, #phonemany header, #systemnotice header, #friendlist header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    background: #202833;
+    height: 0.6rem; }
+    #setPassword header span, #setCenter header span, #changeName header span, #extendCenter header span, #persondata header span, #commitList header span, #Myexercise header span, #phonemany header span, #systemnotice header span, #friendlist header span {
+      font-size: 0.2rem;
+      font-weight: bold;
+      text-align: center; }
+    #setPassword header .icon-fanhui, #setCenter header .icon-fanhui, #changeName header .icon-fanhui, #extendCenter header .icon-fanhui, #persondata header .icon-fanhui, #commitList header .icon-fanhui, #Myexercise header .icon-fanhui, #phonemany header .icon-fanhui, #systemnotice header .icon-fanhui, #friendlist header .icon-fanhui {
+      width: 10%;
+      position: relative; }
+    #setPassword header span:nth-of-type(2), #setCenter header span:nth-of-type(2), #changeName header span:nth-of-type(2), #extendCenter header span:nth-of-type(2), #persondata header span:nth-of-type(2), #commitList header span:nth-of-type(2), #Myexercise header span:nth-of-type(2), #phonemany header span:nth-of-type(2), #systemnotice header span:nth-of-type(2), #friendlist header span:nth-of-type(2) {
+      width: 60%; }
+    #setPassword header span:nth-of-type(3), #setCenter header span:nth-of-type(3), #changeName header span:nth-of-type(3), #extendCenter header span:nth-of-type(3), #persondata header span:nth-of-type(3), #commitList header span:nth-of-type(3), #Myexercise header span:nth-of-type(3), #phonemany header span:nth-of-type(3), #systemnotice header span:nth-of-type(3), #friendlist header span:nth-of-type(3) {
+      width: 10%; }
+  #setPassword article, #setCenter article, #changeName article, #extendCenter article, #persondata article, #commitList article, #Myexercise article, #phonemany article, #systemnotice article, #friendlist article {
+    margin: 0 0.2rem 0 0.2rem; }
+    #setPassword article p:nth-of-type(1), #setCenter article p:nth-of-type(1), #changeName article p:nth-of-type(1), #extendCenter article p:nth-of-type(1), #persondata article p:nth-of-type(1), #commitList article p:nth-of-type(1), #Myexercise article p:nth-of-type(1), #phonemany article p:nth-of-type(1), #systemnotice article p:nth-of-type(1), #friendlist article p:nth-of-type(1) {
+      font-size: 0.18rem;
+      height: 0.5rem;
+      line-height: 0.6rem;
+      font-weight: bold;
+      border-bottom: 1px solid gainsboro; }
+    #setPassword article ul, #setCenter article ul, #changeName article ul, #extendCenter article ul, #persondata article ul, #commitList article ul, #Myexercise article ul, #phonemany article ul, #systemnotice article ul, #friendlist article ul {
+      margin: 0.15rem 0 0.15rem 0; }
+    #setPassword article p:nth-of-type(2), #setCenter article p:nth-of-type(2), #changeName article p:nth-of-type(2), #extendCenter article p:nth-of-type(2), #persondata article p:nth-of-type(2), #commitList article p:nth-of-type(2), #Myexercise article p:nth-of-type(2), #phonemany article p:nth-of-type(2), #systemnotice article p:nth-of-type(2), #friendlist article p:nth-of-type(2) {
+      margin: 0.15rem 0 0.15rem 0; }
+    #setPassword article p, #setPassword article ul > li, #setCenter article p, #setCenter article ul > li, #changeName article p, #changeName article ul > li, #extendCenter article p, #extendCenter article ul > li, #persondata article p, #persondata article ul > li, #commitList article p, #commitList article ul > li, #Myexercise article p, #Myexercise article ul > li, #phonemany article p, #phonemany article ul > li, #systemnotice article p, #systemnotice article ul > li, #friendlist article p, #friendlist article ul > li {
+      font-size: 0.15rem; }
+  #setPassword .setPass, #setPassword .personhead, #setPassword .personhead1, #setPassword .personhead2, #setCenter .setPass, #setCenter .personhead, #setCenter .personhead1, #setCenter .personhead2, #changeName .setPass, #changeName .personhead, #changeName .personhead1, #changeName .personhead2, #extendCenter .setPass, #extendCenter .personhead, #extendCenter .personhead1, #extendCenter .personhead2, #persondata .setPass, #persondata .personhead, #persondata .personhead1, #persondata .personhead2, #commitList .setPass, #commitList .personhead, #commitList .personhead1, #commitList .personhead2, #Myexercise .setPass, #Myexercise .personhead, #Myexercise .personhead1, #Myexercise .personhead2, #phonemany .setPass, #phonemany .personhead, #phonemany .personhead1, #phonemany .personhead2, #systemnotice .setPass, #systemnotice .personhead, #systemnotice .personhead1, #systemnotice .personhead2, #friendlist .setPass, #friendlist .personhead, #friendlist .personhead1, #friendlist .personhead2 {
+    height: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.15rem;
+    border-bottom: 1px solid gainsboro;
+    background: white;
+    color: black; }
+    #setPassword .setPass input, #setPassword .personhead input, #setPassword .personhead1 input, #setPassword .personhead2 input, #setCenter .setPass input, #setCenter .personhead input, #setCenter .personhead1 input, #setCenter .personhead2 input, #changeName .setPass input, #changeName .personhead input, #changeName .personhead1 input, #changeName .personhead2 input, #extendCenter .setPass input, #extendCenter .personhead input, #extendCenter .personhead1 input, #extendCenter .personhead2 input, #persondata .setPass input, #persondata .personhead input, #persondata .personhead1 input, #persondata .personhead2 input, #commitList .setPass input, #commitList .personhead input, #commitList .personhead1 input, #commitList .personhead2 input, #Myexercise .setPass input, #Myexercise .personhead input, #Myexercise .personhead1 input, #Myexercise .personhead2 input, #phonemany .setPass input, #phonemany .personhead input, #phonemany .personhead1 input, #phonemany .personhead2 input, #systemnotice .setPass input, #systemnotice .personhead input, #systemnotice .personhead1 input, #systemnotice .personhead2 input, #friendlist .setPass input, #friendlist .personhead input, #friendlist .personhead1 input, #friendlist .personhead2 input {
+      border: none;
+      outline: none;
+      padding: 0.1rem;
+      width: 70%; }
+    #setPassword .setPass input::-webkit-input-placeholder, #setPassword .personhead input::-webkit-input-placeholder, #setPassword .personhead1 input::-webkit-input-placeholder, #setPassword .personhead2 input::-webkit-input-placeholder, #setCenter .setPass input::-webkit-input-placeholder, #setCenter .personhead input::-webkit-input-placeholder, #setCenter .personhead1 input::-webkit-input-placeholder, #setCenter .personhead2 input::-webkit-input-placeholder, #changeName .setPass input::-webkit-input-placeholder, #changeName .personhead input::-webkit-input-placeholder, #changeName .personhead1 input::-webkit-input-placeholder, #changeName .personhead2 input::-webkit-input-placeholder, #extendCenter .setPass input::-webkit-input-placeholder, #extendCenter .personhead input::-webkit-input-placeholder, #extendCenter .personhead1 input::-webkit-input-placeholder, #extendCenter .personhead2 input::-webkit-input-placeholder, #persondata .setPass input::-webkit-input-placeholder, #persondata .personhead input::-webkit-input-placeholder, #persondata .personhead1 input::-webkit-input-placeholder, #persondata .personhead2 input::-webkit-input-placeholder, #commitList .setPass input::-webkit-input-placeholder, #commitList .personhead input::-webkit-input-placeholder, #commitList .personhead1 input::-webkit-input-placeholder, #commitList .personhead2 input::-webkit-input-placeholder, #Myexercise .setPass input::-webkit-input-placeholder, #Myexercise .personhead input::-webkit-input-placeholder, #Myexercise .personhead1 input::-webkit-input-placeholder, #Myexercise .personhead2 input::-webkit-input-placeholder, #phonemany .setPass input::-webkit-input-placeholder, #phonemany .personhead input::-webkit-input-placeholder, #phonemany .personhead1 input::-webkit-input-placeholder, #phonemany .personhead2 input::-webkit-input-placeholder, #systemnotice .setPass input::-webkit-input-placeholder, #systemnotice .personhead input::-webkit-input-placeholder, #systemnotice .personhead1 input::-webkit-input-placeholder, #systemnotice .personhead2 input::-webkit-input-placeholder, #friendlist .setPass input::-webkit-input-placeholder, #friendlist .personhead input::-webkit-input-placeholder, #friendlist .personhead1 input::-webkit-input-placeholder, #friendlist .personhead2 input::-webkit-input-placeholder {
+      font-size: 0.18rem; }
+    #setPassword .setPass span, #setPassword .personhead span, #setPassword .personhead1 span, #setPassword .personhead2 span, #setCenter .setPass span, #setCenter .personhead span, #setCenter .personhead1 span, #setCenter .personhead2 span, #changeName .setPass span, #changeName .personhead span, #changeName .personhead1 span, #changeName .personhead2 span, #extendCenter .setPass span, #extendCenter .personhead span, #extendCenter .personhead1 span, #extendCenter .personhead2 span, #persondata .setPass span, #persondata .personhead span, #persondata .personhead1 span, #persondata .personhead2 span, #commitList .setPass span, #commitList .personhead span, #commitList .personhead1 span, #commitList .personhead2 span, #Myexercise .setPass span, #Myexercise .personhead span, #Myexercise .personhead1 span, #Myexercise .personhead2 span, #phonemany .setPass span, #phonemany .personhead span, #phonemany .personhead1 span, #phonemany .personhead2 span, #systemnotice .setPass span, #systemnotice .personhead span, #systemnotice .personhead1 span, #systemnotice .personhead2 span, #friendlist .setPass span, #friendlist .personhead span, #friendlist .personhead1 span, #friendlist .personhead2 span {
+      font-size: 0.15rem; }
+    #setPassword .setPass .friend, #setPassword .personhead .friend, #setPassword .personhead1 .friend, #setPassword .personhead2 .friend, #setCenter .setPass .friend, #setCenter .personhead .friend, #setCenter .personhead1 .friend, #setCenter .personhead2 .friend, #changeName .setPass .friend, #changeName .personhead .friend, #changeName .personhead1 .friend, #changeName .personhead2 .friend, #extendCenter .setPass .friend, #extendCenter .personhead .friend, #extendCenter .personhead1 .friend, #extendCenter .personhead2 .friend, #persondata .setPass .friend, #persondata .personhead .friend, #persondata .personhead1 .friend, #persondata .personhead2 .friend, #commitList .setPass .friend, #commitList .personhead .friend, #commitList .personhead1 .friend, #commitList .personhead2 .friend, #Myexercise .setPass .friend, #Myexercise .personhead .friend, #Myexercise .personhead1 .friend, #Myexercise .personhead2 .friend, #phonemany .setPass .friend, #phonemany .personhead .friend, #phonemany .personhead1 .friend, #phonemany .personhead2 .friend, #systemnotice .setPass .friend, #systemnotice .personhead .friend, #systemnotice .personhead1 .friend, #systemnotice .personhead2 .friend, #friendlist .setPass .friend, #friendlist .personhead .friend, #friendlist .personhead1 .friend, #friendlist .personhead2 .friend {
+      font-size: 0.18rem; }
+  #setPassword .goOut, #setCenter .goOut, #changeName .goOut, #extendCenter .goOut, #persondata .goOut, #commitList .goOut, #Myexercise .goOut, #phonemany .goOut, #systemnotice .goOut, #friendlist .goOut {
+    text-align: center;
+    font-size: 0.18rem;
+    margin-top: 0.39rem;
+    padding: 0.1rem 0;
+    background: white;
+    color: #64D1C0; }
+  #setPassword .text_area, #setCenter .text_area, #changeName .text_area, #extendCenter .text_area, #persondata .text_area, #commitList .text_area, #Myexercise .text_area, #phonemany .text_area, #systemnotice .text_area, #friendlist .text_area {
+    width: 100%;
+    height: 0.9rem;
+    background: white;
+    position: relative; }
+    #setPassword .text_area textarea, #setCenter .text_area textarea, #changeName .text_area textarea, #extendCenter .text_area textarea, #persondata .text_area textarea, #commitList .text_area textarea, #Myexercise .text_area textarea, #phonemany .text_area textarea, #systemnotice .text_area textarea, #friendlist .text_area textarea {
+      width: 3.1rem;
+      height: 1rem;
+      border: none;
+      outline: none;
+      font-size: 0.18rem;
+      resize: none;
+      color: #5C5C5C; }
+    #setPassword .text_area span, #setCenter .text_area span, #changeName .text_area span, #extendCenter .text_area span, #persondata .text_area span, #commitList .text_area span, #Myexercise .text_area span, #phonemany .text_area span, #systemnotice .text_area span, #friendlist .text_area span {
+      position: absolute;
+      color: gray;
+      right: 0.38rem;
+      top: 0.08rem; }
+  #setPassword .exceed, #setCenter .exceed, #changeName .exceed, #extendCenter .exceed, #persondata .exceed, #commitList .exceed, #Myexercise .exceed, #phonemany .exceed, #systemnotice .exceed, #friendlist .exceed {
+    width: 100%;
+    position: absolute;
+    font-size: 0.16rem;
+    color: gainsboro;
+    background: white; }
+  #setPassword .personhead, #setCenter .personhead, #changeName .personhead, #extendCenter .personhead, #persondata .personhead, #commitList .personhead, #Myexercise .personhead, #phonemany .personhead, #systemnotice .personhead, #friendlist .personhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #setPassword .personhead span:nth-of-type(2), #setCenter .personhead span:nth-of-type(2), #changeName .personhead span:nth-of-type(2), #extendCenter .personhead span:nth-of-type(2), #persondata .personhead span:nth-of-type(2), #commitList .personhead span:nth-of-type(2), #Myexercise .personhead span:nth-of-type(2), #phonemany .personhead span:nth-of-type(2), #systemnotice .personhead span:nth-of-type(2), #friendlist .personhead span:nth-of-type(2) {
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+      font-size: 0.3rem; }
+      #setPassword .personhead span:nth-of-type(2) img, #setCenter .personhead span:nth-of-type(2) img, #changeName .personhead span:nth-of-type(2) img, #extendCenter .personhead span:nth-of-type(2) img, #persondata .personhead span:nth-of-type(2) img, #commitList .personhead span:nth-of-type(2) img, #Myexercise .personhead span:nth-of-type(2) img, #phonemany .personhead span:nth-of-type(2) img, #systemnotice .personhead span:nth-of-type(2) img, #friendlist .personhead span:nth-of-type(2) img {
+        width: 0.35rem;
+        height: 0.35rem; }
+      #setPassword .personhead span:nth-of-type(2) i, #setCenter .personhead span:nth-of-type(2) i, #changeName .personhead span:nth-of-type(2) i, #extendCenter .personhead span:nth-of-type(2) i, #persondata .personhead span:nth-of-type(2) i, #commitList .personhead span:nth-of-type(2) i, #Myexercise .personhead span:nth-of-type(2) i, #phonemany .personhead span:nth-of-type(2) i, #systemnotice .personhead span:nth-of-type(2) i, #friendlist .personhead span:nth-of-type(2) i {
+        margin-top: 0.1rem;
+        color: #A0A0A0;
+        margin-right: 0.25rem;
+        margin-left: 0.2rem;
+        font-size: 0.15rem; }
+  #setPassword .personhead1, #setPassword .personhead2, #setCenter .personhead1, #setCenter .personhead2, #changeName .personhead1, #changeName .personhead2, #extendCenter .personhead1, #extendCenter .personhead2, #persondata .personhead1, #persondata .personhead2, #commitList .personhead1, #commitList .personhead2, #Myexercise .personhead1, #Myexercise .personhead2, #phonemany .personhead1, #phonemany .personhead2, #systemnotice .personhead1, #systemnotice .personhead2, #friendlist .personhead1, #friendlist .personhead2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #setPassword .personhead1 span:nth-of-type(1), #setPassword .personhead2 span:nth-of-type(1), #setCenter .personhead1 span:nth-of-type(1), #setCenter .personhead2 span:nth-of-type(1), #changeName .personhead1 span:nth-of-type(1), #changeName .personhead2 span:nth-of-type(1), #extendCenter .personhead1 span:nth-of-type(1), #extendCenter .personhead2 span:nth-of-type(1), #persondata .personhead1 span:nth-of-type(1), #persondata .personhead2 span:nth-of-type(1), #commitList .personhead1 span:nth-of-type(1), #commitList .personhead2 span:nth-of-type(1), #Myexercise .personhead1 span:nth-of-type(1), #Myexercise .personhead2 span:nth-of-type(1), #phonemany .personhead1 span:nth-of-type(1), #phonemany .personhead2 span:nth-of-type(1), #systemnotice .personhead1 span:nth-of-type(1), #systemnotice .personhead2 span:nth-of-type(1), #friendlist .personhead1 span:nth-of-type(1), #friendlist .personhead2 span:nth-of-type(1) {
+      font-size: 0.15rem; }
+    #setPassword .personhead1 span:nth-of-type(2), #setPassword .personhead2 span:nth-of-type(2), #setCenter .personhead1 span:nth-of-type(2), #setCenter .personhead2 span:nth-of-type(2), #changeName .personhead1 span:nth-of-type(2), #changeName .personhead2 span:nth-of-type(2), #extendCenter .personhead1 span:nth-of-type(2), #extendCenter .personhead2 span:nth-of-type(2), #persondata .personhead1 span:nth-of-type(2), #persondata .personhead2 span:nth-of-type(2), #commitList .personhead1 span:nth-of-type(2), #commitList .personhead2 span:nth-of-type(2), #Myexercise .personhead1 span:nth-of-type(2), #Myexercise .personhead2 span:nth-of-type(2), #phonemany .personhead1 span:nth-of-type(2), #phonemany .personhead2 span:nth-of-type(2), #systemnotice .personhead1 span:nth-of-type(2), #systemnotice .personhead2 span:nth-of-type(2), #friendlist .personhead1 span:nth-of-type(2), #friendlist .personhead2 span:nth-of-type(2) {
+      font-size: 0.15rem;
+      color: #A0A0A0; }
+  #setPassword .personhead2, #setCenter .personhead2, #changeName .personhead2, #extendCenter .personhead2, #persondata .personhead2, #commitList .personhead2, #Myexercise .personhead2, #phonemany .personhead2, #systemnotice .personhead2, #friendlist .personhead2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #setPassword .personhead2 span:nth-of-type(2), #setCenter .personhead2 span:nth-of-type(2), #changeName .personhead2 span:nth-of-type(2), #extendCenter .personhead2 span:nth-of-type(2), #persondata .personhead2 span:nth-of-type(2), #commitList .personhead2 span:nth-of-type(2), #Myexercise .personhead2 span:nth-of-type(2), #phonemany .personhead2 span:nth-of-type(2), #systemnotice .personhead2 span:nth-of-type(2), #friendlist .personhead2 span:nth-of-type(2) {
+      padding: 0.02rem;
+      border: 1px solid #F682C0;
+      border-radius: 0.15rem; }
+      #setPassword .personhead2 span:nth-of-type(2) img, #setCenter .personhead2 span:nth-of-type(2) img, #changeName .personhead2 span:nth-of-type(2) img, #extendCenter .personhead2 span:nth-of-type(2) img, #persondata .personhead2 span:nth-of-type(2) img, #commitList .personhead2 span:nth-of-type(2) img, #Myexercise .personhead2 span:nth-of-type(2) img, #phonemany .personhead2 span:nth-of-type(2) img, #systemnotice .personhead2 span:nth-of-type(2) img, #friendlist .personhead2 span:nth-of-type(2) img {
+        width: 0.2rem;
+        height: 0.2rem;
+        margin: 0 0.11rem; }
+      #setPassword .personhead2 span:nth-of-type(2) span, #setCenter .personhead2 span:nth-of-type(2) span, #changeName .personhead2 span:nth-of-type(2) span, #extendCenter .personhead2 span:nth-of-type(2) span, #persondata .personhead2 span:nth-of-type(2) span, #commitList .personhead2 span:nth-of-type(2) span, #Myexercise .personhead2 span:nth-of-type(2) span, #phonemany .personhead2 span:nth-of-type(2) span, #systemnotice .personhead2 span:nth-of-type(2) span, #friendlist .personhead2 span:nth-of-type(2) span {
+        margin-right: 0.1rem; }
+  #setPassword .hubtable, #setCenter .hubtable, #changeName .hubtable, #extendCenter .hubtable, #persondata .hubtable, #commitList .hubtable, #Myexercise .hubtable, #phonemany .hubtable, #systemnotice .hubtable, #friendlist .hubtable {
+    border: none; }
+    #setPassword .hubtable tr, #setCenter .hubtable tr, #changeName .hubtable tr, #extendCenter .hubtable tr, #persondata .hubtable tr, #commitList .hubtable tr, #Myexercise .hubtable tr, #phonemany .hubtable tr, #systemnotice .hubtable tr, #friendlist .hubtable tr {
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.12rem;
+      padding: 0.1rem; }
+      #setPassword .hubtable tr td, #setCenter .hubtable tr td, #changeName .hubtable tr td, #extendCenter .hubtable tr td, #persondata .hubtable tr td, #commitList .hubtable tr td, #Myexercise .hubtable tr td, #phonemany .hubtable tr td, #systemnotice .hubtable tr td, #friendlist .hubtable tr td {
+        background: white; }
+      #setPassword .hubtable tr td:nth-of-type(3), #setCenter .hubtable tr td:nth-of-type(3), #changeName .hubtable tr td:nth-of-type(3), #extendCenter .hubtable tr td:nth-of-type(3), #persondata .hubtable tr td:nth-of-type(3), #commitList .hubtable tr td:nth-of-type(3), #Myexercise .hubtable tr td:nth-of-type(3), #phonemany .hubtable tr td:nth-of-type(3), #systemnotice .hubtable tr td:nth-of-type(3), #friendlist .hubtable tr td:nth-of-type(3) {
+        color: #34C5B1; }
+    #setPassword .hubtable tr:nth-of-type(1), #setCenter .hubtable tr:nth-of-type(1), #changeName .hubtable tr:nth-of-type(1), #extendCenter .hubtable tr:nth-of-type(1), #persondata .hubtable tr:nth-of-type(1), #commitList .hubtable tr:nth-of-type(1), #Myexercise .hubtable tr:nth-of-type(1), #phonemany .hubtable tr:nth-of-type(1), #systemnotice .hubtable tr:nth-of-type(1), #friendlist .hubtable tr:nth-of-type(1) {
+      background: #F7F7F7;
+      font-size: 0.18rem; }
+
+.changeName_inp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white; }
+  .changeName_inp input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 0.2rem;
+    margin-left: 9%;
+    font-size: 0.16rem; }
+  .changeName_inp span {
+    width: 10%;
+    color: gray; }
+
+#Myexercise .table {
+  border: none; }
+  #Myexercise .table td:nth-of-type(4) {
+    color: #34C5B1; }
+  #Myexercise .table tr {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.12rem;
+    padding: 0.1rem; }
+    #Myexercise .table tr td {
+      background: white; }
+  #Myexercise .table tr:nth-of-type(1) {
+    background: #F7F7F7;
+    font-size: 0.18rem;
+    color: #5E5E5E; }
+
+.wrap #tab_t {
+  background: #202833;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 0.18rem;
+  padding: 0.05rem; }
+  .wrap #tab_t li {
+    width: 50%; }
+  .wrap #tab_t li:hover {
+    color: #05B8A0;
+    border-bottom: 1px solid #05B8A0; }
+.wrap #tab_c {
+  width: 100%; }
+  .wrap #tab_c .table {
+    border: none; }
+    .wrap #tab_c .table td:nth-of-type(4) {
+      color: #34C5B1; }
+    .wrap #tab_c .table tr {
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.12rem;
+      padding: 0.1rem; }
+      .wrap #tab_c .table tr td {
+        background: white; }
+    .wrap #tab_c .table tr:nth-of-type(1) {
+      background: #F7F7F7;
+      font-size: 0.14rem;
+      color: #5E5E5E; }
+  .wrap #tab_c .hide {
+    display: none; }
+
+/*# sourceMappingURL=serverli.css.map */

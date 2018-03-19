@@ -1,0 +1,254 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+.hidden {
+    display: none !important;
+}
+.text-green {
+    color: #23c6b1;
+}
+.text-red {
+    color: red;
+}
+.button-contorl-blue{
+    background-color: #2183fe !important;
+    border:  #2183fe 1px solid;
+}
+.button-red {
+    background-color: red;
+    border: 0.015rem red solid;
+    color: #ffffff;
+    height: 0.36rem;
+    text-align: center;
+    width: 100%;
+}
+.button-blue {
+    background-color: #2183fe;
+    border: 0.015rem #2183fe solid;
+    color: #ffffff;
+    height: 0.36rem;
+    text-align: center;
+    width: 100%;
+}
+.input-group {
+    display: flex;
+}
+
+.input-content {
+    width: 48%;
+}
+.button-less {
+    height: 0.39rem;
+    width: 25%;
+    background-color: red;
+    border: 0;
+    color: #ffffff;
+    font-size: 0.24rem;
+}
+.button-add {
+    height: 0.39rem;
+    width: 25%;
+    background-color: red;
+    border: 0;
+    color: #ffffff;
+    font-size: 0.24rem;
+}
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+.TcHeader {
+    background: #202833;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.6rem;
+    font-size: 0.2rem;
+    font-weight: bold;
+}
+.TcHeader > i:first-of-type {
+    position: absolute;
+    left: 0.4rem;
+}
+.TcHeader > i:last-of-type {
+    position: absolute;
+    right: 0.4rem;
+}
+.caoZuo1 {
+    color: #202833;
+    width: 100%;
+    background: white;
+}
+.caoZuo1 > ul {
+    padding-top: 0.05rem;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.16rem;
+}
+.luDiv{
+    width: 0.2rem;
+    background: #0dc2a9;
+    height: 0.04rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 0.06rem;
+}
+.luse {
+    color: #0dc2a9;
+}
+.li1 {
+    font-size: 0.16rem;
+}
+.li2 {
+    font-size: 0.16rem;
+}
+/*时间交易购买*/
+.label-container {
+    margin-top: 0.1rem;
+}
+.label-tips {
+    padding: 0.02rem 0.07rem;
+    font-size: 0.12rem;
+    border: 0.01rem solid #a9a9a9;
+    color: #a9a9a9;
+}
+.label-borderless {
+    font-size: 0.12rem;
+    color: #a9a9a9;
+}
+.features {
+    margin-top: 2%;
+    background-color: white;
+    display: flex;
+}
+.input-container {
+    width: 60%;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.1rem 0.1rem 0.1rem;
+}
+.input-area li {
+    margin-top: 0.1rem;
+    width: 100%;
+}
+.input-area input {
+    height: 0.36rem;
+    text-align: center;
+    width: 99%;
+}
+.input-border-red input {
+    border: 0.015rem solid red;
+}
+.input-border-blue input {
+    border: 0.015rem solid #2183fe;
+}
+.features:nth-child(2) {
+    width: 40%;
+}
+.tab-container {
+    width: 40%;
+}
+.tab-header {
+    display: flex;
+    margin-top: 0.15rem;
+}
+.tab-header > li {
+    width: 50%;
+    text-align: center;
+}
+.tab-header > .active {
+    color: #0dc2a9;
+}
+.tab-header > .active > span {
+    border-bottom: #0dc2a9 0.04rem solid;
+    padding-bottom: 0.05rem;
+    border-radius: 0.03rem;
+}
+.tab-content > div {
+    height: 2.05rem;
+    margin-top: 0.1rem;
+    overflow-y: scroll;
+    overflow-y: hidden;
+}
+
+.common-table {
+    width: 100%;
+    margin-top: 2%;
+    background-color: white;
+}
+.common-table > thead > tr > td {
+    font-size: 0.15rem;
+    text-align: center;
+    height: 0.4rem;
+    color: #777777;
+    border-bottom: 0.02rem solid #f0f0f0;
+}
+.common-table > tbody > tr{
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+.common-table > tbody > tr > td {
+    font-size: 0.15rem;
+    text-align: center;
+}
+.common-table > tbody > tr > td > dl > dd {
+    line-height: 0.3rem;
+}
+.li4 {
+    font-size: 0.16rem;
+}
+.li4-header {
+    background-color: white;
+    height: 0.75rem;
+    margin-top: 0.1rem;
+}
+.li4-header > .item-container {
+    height: 0.75rem;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.li4-header > .item-container > img,
+.li4-header > .item-container > dl {
+    display: inline-block;
+}
+.li4-header > .item-container > img {
+    width: 0.45rem;
+    height: 0.45rem;
+}
+.li4-header > .item-container > dl > dd {
+    font-size: 0.14rem;
+    line-height: 0.3rem;
+    text-indent: 0.2rem;
+}
+.li4-header > .item-container > dl > dd:nth-child(2) {
+    color: #777777;
+}
+.li5 > ul:first-child {
+    margin-top: 2%;
+}
+.li5 > ul {
+    margin-top: 1%;
+}
+.li5 > ul > li {
+    font-size: 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    background-color: white;
+    text-indent: 0.2rem;
+    margin-top: 0.5%;
+}
+

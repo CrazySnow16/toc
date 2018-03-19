@@ -1,0 +1,53 @@
+.rankingBg{
+    width: 100%;
+    height: 100%;
+    background: url(../../image/ranking_bg.png)no-repeat;
+    background-size:100% 100% ;
+}
+#table{
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.5);
+    font-size: 0.14rem;
+    border-radius: 28px;
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+}
+.table_data{
+    text-align: center;
+}
+.table_data>td{
+    padding-top: 0.1rem;
+}
+.table_data img{
+    width: 53%;
+}
+.table_name{
+    color: #646464;
+}
+.table_data{
+    color: #03BDA6;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo>img{
+    width: 82%;
+    height: 30%;
+}
+header{
+    width: 100%;
+    height: 0.6rem;
+    position: relative;
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 20px 10px rgba(0,0,0,0.05);
+}
+header img{
+    top: 0.3rem;
+    width: 5%;
+    position: absolute;
+    left: 0.3rem;
+    transform: rotateZ(90deg);
+}

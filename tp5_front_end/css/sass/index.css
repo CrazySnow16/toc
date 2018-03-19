@@ -1,0 +1,155 @@
+.header{
+    width: 100%;
+    height: 0.5rem;
+    background: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.16rem;
+    position: relative;
+    font-weight: bold;
+}
+.header>img{
+    position: absolute;
+    left: 0.3rem;
+    transform: rotateZ(90deg);
+    width: 5%;
+}
+body{
+    background:#F7F7F7 ;
+}
+.iToc{
+    width: 100%;
+    background: #ffffff;
+    padding-top: 0.06rem;
+    padding-bottom: 0.06rem;
+    color: #000;
+    font-size: 0.14rem;
+}
+.iToc>div{
+    width: 90%;
+    margin: 0 auto;
+}
+.iToc span{
+    color: #4ACCB9 !important;
+}
+.inputRech{
+    width: 100%;
+    background: #ffffff;
+    height: 1rem;
+    overflow: hidden;
+    margin-top: 0.02rem;
+}
+.inputRech>div{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.18rem;
+}
+.inputRech>div>input{
+    font-size: 0.26rem;
+    font-weight: bold;
+    width: 60%;
+    border: none;
+}
+.inputRech>div>img{
+    width: 9%;
+}
+.inputRech>p{
+    width: 90%;
+    margin: 0 auto;
+    color: #C4C4C4;
+    margin-top: 0.1rem;
+    font-size: 0.12rem;
+}
+.Quota{
+    width: 100%;
+    margin-top: 0.04rem;
+    background: #ffffff;
+}
+.Quota>div{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.1rem;
+}
+.Quota>div>span{
+    font-size: 0.14rem;
+    padding-top: 0.05rem;
+}
+.Quota_ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.quota_Li{
+    background-color: #35C8B3 !important;
+    color: #ffffff !important;
+    transition: 0.5s;
+}
+.Quota_ul>li{
+    margin-top: 0.15rem;
+    width: 1.4rem;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.14rem;
+    border-radius: 3px;
+    color: #35C8B3;
+    background-color: #F7F7F7;
+}
+.payment{
+    width: 100%;
+    padding-top: 0.06rem;
+    padding-bottom: 0.06rem;
+    background-color: #ffffff;
+    margin-top: 0.04rem;
+}
+.payment>div{
+    width: 90%;
+    margin: 0 auto;
+}
+.payment_Id{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.14rem;
+    color: #7D7D7D;
+}
+.payment_Id>span:last-child{
+    color: #35C8B3;
+}
+.chongZhi{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 0.01rem;
+}
+.chongZhi>p{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.14rem;
+    color: #35C8B3;
+    padding-top: 0.06rem;
+    padding-bottom: 0.06rem;
+}
+.Determine{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 1rem;
+}
+.Determine>button{
+    width: 100%;
+    height: 0.5rem;
+    font-size: 0.2rem;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color:#03BFA6 ;
+}

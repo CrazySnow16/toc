@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<title>设置中心</title>
+	</head>
+	<body>
+		<div id="setCenter">
+			
+			<!--服务条款页面-->
+			<!--导航头-->
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>设置中心</span>
+				<span></span>
+			</header>
+			
+			<div class="setPass"><span>安全认证</span><span>></span></div>
+			<div class="setPass"><span>密码设置</span><span>></span></div>
+			<div class="setPass"><span>服务条款</span><span>></span></div>
+			<div class="setPass"><span>关于我们</span><span>></span></div>
+		
+			<!--退出登录页面-->
+			<p class="goOut">退出登录</p>
+		</div>
+	</body>
+	<script>
+		//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	</script>
+</html>

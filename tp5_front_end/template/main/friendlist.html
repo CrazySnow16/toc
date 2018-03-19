@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+    	<link rel="stylesheet" type="text/css" href="../../css/time/time.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<title>好友列表</title>
+	</head>
+	<body>
+		<div id="friendlist">
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>好友列表</span>
+				<span></span>
+			</header>
+			
+			<!--一级会员   二级会员-->
+			<div class="caoZuo1">
+			    <ul class="caoZ">
+			        <li>一级会员
+			            <div class="luDiv"></div>
+			        </li>
+			        <li>二级会员
+			            <div class="luDiv"></div>
+			        </li>
+			    </ul>
+			</div>
+
+		<!--一级会员-->
+		<div class="li1 click_li">
+		    <table class="common-table">
+		      <tr>
+			 		<th>账户号码</th>
+			 		<th>注册日期</th>
+			 		<th>认证状态</th>
+			 	</tr>
+			 	<tr>
+			 		<td>1132321321</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 	</tr>
+			 	<tr>
+			 		<td>1132321321</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 	</tr>
+		    </table>
+		</div>
+		
+		
+		<!--二级会员-->
+		<div class="li2 click_li">
+		    <table class="common-table">
+		        <tr>
+			 		<th>账户号码</th>
+			 		<th>注册日期</th>
+			 		<th>认证状态</th>
+			 	</tr>
+			 	<tr>
+			 		<td>1谷歌返21</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 	</tr>
+			 	<tr>
+			 		<td>1非通用天也1</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 	</tr>
+		    </table>
+		</div>
+   
+
+		</div>
+	</body>
+	<script>
+	//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	    window.onload = function(){
+			 $(".click_li").eq(0).show();
+		    $(".click_li").eq(1).hide();
+		    $(".click_li").eq(2).hide();
+		    $(".click_li").eq(3).hide();
+		    $(".click_li").eq(4).hide();
+		    //
+		    $(".luDiv").eq(0).show();
+		    $(".luDiv").eq(1).hide();
+		    $(".luDiv").eq(2).hide();
+		    $(".luDiv").eq(3).hide();
+		    $(".luDiv").eq(4).hide();
+			
+			 $(".caoZuo1 li").click(function () {
+		        $(".click_li").show().eq($(this).index()).siblings(".click_li").hide();
+		        $(".caoZuo1 li").eq($(this).index()).addClass("luse").siblings("li").removeClass("luse");
+		        //$(".luDiv").hide().eq($(this).index()).parent().children(".luDiv").show();
+		        li2()
+		    });
+		     function li2() {
+        var diaplay_li2 = $(".li2").css("display");
+        var diaplay_li5 = $(".li5").css("display");
+        var diaplay_li4 = $(".li4").css("display");
+        var diaplay_li3 = $(".li3").css("display");
+        var diaplay_li1 = $(".li1").css("display");
+        if (diaplay_li2 == "block") {
+            $(".luDiv").hide().eq(1).parent().children(".luDiv").show();
+        } else if (diaplay_li5 == "block") {
+            $(".luDiv").hide().eq(4).parent().children(".luDiv").show();
+        } else if (diaplay_li4 == "block") {
+            $(".luDiv").hide().eq(3).parent().children(".luDiv").show();
+        } else if (diaplay_li3 == "block") {
+            $(".luDiv").hide().eq(2).parent().children(".luDiv").show();
+        } else if (diaplay_li1 == "block") {
+            $(".luDiv").hide().eq(0).parent().children(".luDiv").show();
+        }
+    }
+		}
+	</script>
+</html>

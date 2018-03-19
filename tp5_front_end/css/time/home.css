@@ -1,0 +1,246 @@
+body{
+	background: #FAFAFA;
+}
+.banner{
+	width: 100%;
+	height: 1.2rem;
+}
+.swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.daoHang{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background: #FFFFFF;
+}
+.daoHang>a{
+	display: block;
+	width: 25%;
+}
+.daoHang>a>div{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.14rem;
+}
+.daoImg1{
+	width: 0.3rem;
+}
+.daoImg2{
+	width: 0.3rem;
+}
+.daoImg3{
+	width: 0.32rem;
+}
+.daoImg4{
+	width: 0.24rem;
+}
+.daoHang>a>div img{
+	display: block;
+	padding-bottom: 0.1rem;
+	padding-top: 0.1rem;
+}
+.Ttiao{
+	width: 100%;
+	display: flex;
+	height: 0.3rem;
+	background: #FFFFFF;
+	align-items: center;
+	margin-top: 0.01rem;
+}
+.Ttiao>img{
+	margin-left: 0.15rem;
+	    width: 0.5rem;
+    height: 0.16rem;
+}
+#holder li{
+	margin-top: 0.08rem;
+}
+.Ttiao>div{
+	position: relative;
+	height: 100%;
+	width: 1.5rem;
+	font-size: 0.14rem;
+	color: #ABABAB;
+	overflow: hidden;
+	margin-left: 0.2rem;
+}
+.newHost{
+	width: 100%;
+	background: #FFFFFF;
+	margin-top: 0.03rem;
+	padding-top: 0.1rem;
+}
+.newHost>div{
+	padding-left: 0.2rem;
+}
+.newHost>div>span{
+	font-size: 0.16rem;
+	display: flex;
+}
+.new_host{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #A2A2A2;
+	height: 1.01rem;
+	margin-top: 0.06rem !important;
+	padding-bottom: 0.3rem !important;
+}
+.new_host>div{
+	height: 100%;
+}
+.new_host>div>div{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.new_host>div>div>div:last-child{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 0.15rem;
+}
+.new_bg{
+	width: 100%;
+	height: 80%;
+	box-shadow: 0 0 15px #cdd5dd;
+	border-radius:10px ;
+	background: url(../../image/ou2.jpg)no-repeat;
+	background-size:cover ;
+}
+/*推荐主播*/
+.recommendHost{
+	background: #FFFFFF;
+}
+.recommendHost>div{
+	padding-left: 0.2rem;
+}
+.recommendHost>div>span{
+	font-size: 0.16rem;
+	display: flex;
+}
+.recommend_host{
+	font-size: 0.12rem;
+	height: 2.5rem;
+}
+.recommend_host>div>div{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.kan_Host{
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90%;
+	border-radius:5px ;
+	box-shadow: 0 0 10px #CED5DD;
+	margin-left: -0.16rem;
+}
+.kan_Host>div{
+	width: 85%;
+	height: 85%;
+}
+.recommend_bg{
+	width: 100%;
+	height: 1.2rem;
+	background: url(../../image/ou1.jpg)no-repeat;
+	background-size:cover ;
+}
+.active{
+	padding-bottom: 0.1rem;
+    display: block;
+}
+.fenZhong{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.05rem;
+}
+.fenZhong>button{
+	border: none;
+	color: #FFFFFF;
+	width: 0.5rem;
+	height: 0.2rem;
+	background: #2EE2D6;
+	border-radius: 20px;
+}
+.jiao_Yi{
+	width: 100%;
+	color: #9C9C9C;
+	margin-top: 0.15rem;
+}
+.jiao_Yi>span{
+	padding-left: 0.05rem;
+}
+.starList{
+	width: 100%;
+	background: #FFFFFF;
+	padding-bottom: 0.6rem;
+	padding-top: 0.1rem;
+}
+.starList>div{
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 0 0 10px #CED5DD;
+	height: 1.3rem;	
+	display: flex;
+	align-items: center;
+}
+.star img{
+	width: 64%;
+}
+.star{
+	font-size: 0.16rem;
+	display: flex;
+	width: 20%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.list{
+	font-size: 0.14rem;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.list_tx{
+	width: 0.5rem;
+	height: 0.5rem;
+	background: url(../../image/ou2.jpg);
+	border-radius: 50%;
+	background-size:cover ;
+}
+.list>div{
+	width: 33%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: center;
+	height: 90%;
+}
+.list_text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

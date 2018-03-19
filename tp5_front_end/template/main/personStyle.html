@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/font-awesome/font-awesome.min.css"/>
+		<title>修改个性签名</title>
+	</head>
+	<body>
+		<div id="extendCenter">
+			
+			<!--服务条款页面-->
+			<!--导航头-->
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>修改个性签名</span>
+				<span class="iconfont iconfont-zhengque" ></span>
+			</header>
+			
+			  <div class="text_area">
+			  	<textarea   maxlength="30" placeholder="可以修改签名了"></textarea>
+				<span class="iconfont iconfont-cuowu" id="cuowu"></span>
+			  </div>
+			  <span class="exceed">不超过30字</span>
+		
+		</div>
+	</body>
+	<script>
+		//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	    $("#cuowu").click(function(){
+			$("textarea").val("")
+		})
+	</script>
+</html>

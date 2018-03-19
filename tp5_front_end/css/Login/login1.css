@@ -1,0 +1,141 @@
+body{
+	overflow: hidden;
+}
+.logo1{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 0.3rem;
+}
+.loding{
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.loding>div{
+	width: 100%;
+}
+.loding>div:first-child{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 0.5rem;
+}
+.loding>div:first-child>img{
+	width: 85%;
+}
+.loding>div:nth-last-child(2){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loding>div:nth-last-child(2)>img{
+	width: 90%;
+	animation: name 4s linear  infinite;
+	display: block;
+	border-radius: 50%;
+}
+@keyframes name {
+	to{transform: rotateZ(360deg)}
+	from{transform: rotateZ(0deg)}
+}
+.loding>div:last-child{
+	margin-top: 0.5rem;
+}
+.loding>div:last-child>img{
+	width: 58%;
+	float: right;
+}
+.logo1>img{
+	width: 1rem;
+	height: 1rem;
+}
+.logo1>span{
+	font-size: 0.14rem;
+	color: #a09f9f;
+	padding-top: 0.2rem;
+}
+#from_login1{
+	width: 100%;
+}
+.phone_number{
+	width: 2.5rem;
+	height: 0.4rem;
+	border-radius: 0.05rem;
+	border: 1px solid #d5d5d5;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	box-shadow: 0 0 0.01rem #A09F9F;
+}
+.phone_number>img{
+	width: 0.2rem;
+	height: 0.2rem;
+	padding-left: 0.2rem;
+	padding-right: 0.25rem;
+}
+.phone_number>input{
+	border: none;
+	width: 60%;
+	color: #2c2c2c;
+	font-size: 0.15rem;
+	font-weight: bold;
+}
+#from_login1{
+	margin-top: 1rem;
+}
+.pass{
+	width: 2.5rem;
+	height: 0.4rem;
+	border-radius: 0.05rem;
+	border: 1px solid #d5d5d5;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	box-shadow: 0 0 0.01rem #A09F9F;
+	margin-top: 0.15rem;
+}
+.pass>img{
+	width: 0.2rem;
+	height: 0.2rem;
+	padding-left: 0.23rem;
+	padding-right: 0.25rem;
+}
+.pass>img:last-child{
+	height: 0.15rem;
+	width: 0.25rem;	
+}
+.pass>input{
+	border: none;
+	width: 60%;
+	color: #2c2c2c;
+	font-size: 0.15rem;
+	font-weight: bold;
+}
+.submit{
+	display: block;
+	width: 2rem;
+	height: 0.5rem;
+	background:#2ee2c9 ;
+	box-shadow: 0 0 0.2rem #b4fdf4;
+	font-size: 0.2rem;
+	margin: 0 auto;
+	outline: none;
+	border: 0;
+	color: #FFFFFF;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+}
+.wjpass{
+	width: 100%;
+	font-size: 0.14rem;
+	color: red;
+	text-align: center;
+	margin-top: 0.2rem;
+}

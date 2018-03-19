@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../css/ty.css">
+    <link rel="stylesheet" href="../../css/sass/index.css">
+    <script src="../../js/adaptationZ.js"></script>
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="../../image/white_jt.png" alt="">
+        <span>手机充值</span>
+    </div>
+    <div class="iToc">
+        <div>
+            我的TOC：<span>120.00</span>
+        </div>
+    </div>
+    <div class="inputRech">
+        <div>
+            <input type="text" value="15100113583">
+            <img src="../../image/tongXun.png" alt="">
+        </div>
+        <p>充值方式为直接到账，充错号将无法退币</p>
+    </div>
+    <div class="Quota">
+        <div>
+            <span>请选择充值额度</span>
+            <ul class="Quota_ul">
+                <li>
+                    <div>
+                        <span>50</span>
+                        <span>元</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>100</span>
+                        <span>元</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>200</span>
+                        <span>元</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>500</span>
+                        <span>元</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="payment">
+        <div>
+            <div class="payment_Id">
+                <span>支付（TOC）</span>
+                <span>
+                100.000
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="chongZhi">
+        <p>
+            <span>充值手续费：</span>
+            <span>0.5TOC</span>
+        </p>
+    </div>
+    <div class="Determine">
+        <button>确定</button>
+    </div>
+    <script>
+        $(".Quota_ul li").click(function () {
+            $(".Quota_ul li").eq($(this).index()).addClass("quota_Li").siblings().removeClass("quota_Li")
+        })
+    </script>
+</body>
+</html>

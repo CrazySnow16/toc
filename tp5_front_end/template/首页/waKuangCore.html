@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/home/waKuangCore.css"/>
+	<script src="../../js/adaptationZ.js" type="text/javascript" charset="utf-8"></script>
+	<title>挖矿中心</title>
+	<style>
+		canvas{
+			position: absolute;
+			left: 0.78rem;
+			top: 0.2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="core_bg">
+		<div class="header_Toc">
+			<div>
+				TOC：<span>100.00</span>
+			</div>
+			<div>
+				矿机：<span>10</span>
+			</div>
+		</div>
+		<div class="four_qiu">
+			<div class="G1">
+				10G
+			</div>
+			<div class="G2">
+				100G
+			</div>
+			<div class="G3">
+				1000G
+			</div>
+			<div class="G4">
+				10000G
+			</div>
+		</div>
+		<div class="gou">
+			<div>
+				购买矿机
+			</div>
+			<div>
+				邀请好友
+			</div>
+		</div>
+	</div>
+	<!--canvas-->
+	<canvas width="2.5rem" height="2.5rem"></canvas>
+	<!--矿机收益-->
+	<div class="kuangJi">
+		<div>
+			<div class="yuji_text">
+				当前预期总收益
+				<span>10.000</span>
+			</div>
+			<button>一键收获</button>
+		</div>
+	</div>
+	
+	<!--最近记录-->
+	<div class="zuijin">
+		<div>
+			<span class="qianQain">当前记录</span>
+			<div class="text_zui">
+				<span>10G</span>
+				<span>
+					<span>10000</span>
+					TOC
+				</span>
+				<span>1小时前</span>
+			</div>
+		</div>
+	</div>
+	<script>
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+        var  clientWidth = document.documentElement.clientWidth;
+        var canvasWidth = Math.floor(clientWidth*375/667);
+        var cw = (canvas.width =canvasWidth), cx = cw / 2;
+        var ch = (canvas.height =canvasWidth), cy = ch / 2;
+        var m = { x: 0, y: 0 };
+        var target = { x: 0, y: 0 };
+        var speed = 0.001;
+        var easing = 0.90;
+
+        var frames = 0;
+
+        var balls = [];
+        var vp = { x: cx, y: cy }; //vanishing point
+        var fl = 250; // focal length
+
+        function Ball(R) {
+            this.r = 2;
+            this.R = R;
+
+            // 3D position
+            this.pos = spherePointPicking(this.R);
+
+            // 2D position
+            this.x = this.pos.x + cx;
+            this.y = this.pos.y + cy;
+            this.a = { x: 0, y: 0 };
+            this.scale = { x: 1, y: 1 };
+
+            this.rotateX = function(angle) {
+                var cos = Math.cos(angle);
+                var sin = Math.sin(angle);
+                var y1 = this.pos.y * cos - this.pos.z * sin;
+                var z1 = this.pos.z * cos + this.pos.y * sin;
+
+                this.pos.y = y1;
+                this.pos.z = z1;
+            };
+
+            this.rotateY = function(angle) {
+                var cos = Math.cos(angle);
+                var sin = Math.sin(angle);
+                var x1 = this.pos.x * cos - this.pos.z * sin;
+                var z1 = this.pos.z * cos + this.pos.x * sin;
+
+                this.pos.x = x1;
+                this.pos.z = z1;
+            };
+
+            this.draw3D = function() {
+                if (this.pos.z > -fl) {
+                    var scale = fl / (fl - this.pos.z);
+                    this.scale = { x: scale, y: scale };
+                    this.x = vp.x + this.pos.x * scale;
+                    this.y = vp.y + this.pos.y * scale;
+                    this.visible = true;
+                } else {
+                    this.visible = false;
+                }
+            };
+
+            this.draw2D = function() {
+
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.scale(this.scale.x, this.scale.y);
+                ctx.beginPath();
+                ctx.arc(0, 0, this.r, 0, 2 * Math.PI);
+                ctx.fillStyle = oGrd(this.r, 164);
+                ctx.fill();
+                ctx.restore();
+            };
+        }
+
+        for (var i = 0; i < 1000; i++) {
+            balls.push(new Ball(90));
+            balls.push(new Ball(50));
+        }
+
+        function Draw() {
+            requestId = window.requestAnimationFrame(Draw);
+            ctx.clearRect(0, 0, cw, ch);
+
+            frames+=.1;
+            t = new Date().getTime() / 127;
+            m.x = cx + Math.cos(t / 43 + Math.cos(t / 47 + frames)) * 50;
+            m.y = cy + Math.sin(t / 31 + Math.cos(t / 37 + frames)) * 50;
+
+            target.x = (m.y - vp.y) * speed;
+            target.y = (m.x - vp.x) * speed;
+
+            balls.map(function(b) {
+                b.draw3D();
+            });
+            balls.sort(function(a, b) {
+                return a.pos.z - b.pos.z;
+            });
+
+            target.x *= easing;
+            target.y *= easing;
+
+            balls.map(function(b) {
+                b.rotateX(target.x);
+                b.rotateY(target.y);
+                if (b.visible) {
+                    b.draw2D();
+                }
+            });
+        }
+        Draw();
+
+        function oGrd(r, h) {
+            grd = ctx.createRadialGradient(0,0,0,0,0,r);
+            grd.addColorStop(0, "hsla(" + h + ",95%,95%, 1)");
+            grd.addColorStop(0.4, "hsla(" + h + ",95%,45%,.1)");
+            grd.addColorStop(1, "hsla(" + h + ", 95%, 45%, 0)");
+            return grd;
+        }
+
+        function spherePointPicking(R){
+            //How to generate random points on a sphere:
+            //https://math.stackexchange.com/questions/1585975/how-to-generate-random-points-on-a-sphere#1586185
+            var u1 = Math.random();
+            var u2 = Math.random();
+            var s = Math.acos(2*u1 - 1) - Math.PI/2;
+            var t = 2*Math.PI*u2;
+
+            return {x : R * Math.cos(s) * Math.cos(t),
+                y : R * Math.cos(s) * Math.sin(t),
+                z : R * Math.sin(s)
+            }
+        }
+
+	</script>
+</body>
+</html>

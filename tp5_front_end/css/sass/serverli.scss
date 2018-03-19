@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#setPassword,#setCenter,#changeName,#extendCenter,#persondata,#commitList,#Myexercise,#phonemany,#systemnotice,#friendlist{
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #ffffff;
+        background: #202833;
+        height: 0.5rem;
+        span{
+             font-size: 0.18rem;
+             font-weight: bold;
+             text-align: center;
+        }
+        .icon-fanhui{
+            width: 10%;
+            position: relative;
+        }
+        span:nth-of-type(2){
+            width: 60%;
+        }
+        span:nth-of-type(3){
+        width: 10%;
+        }
+    }
+    article{
+        margin: 0 0.2rem 0 0.2rem;
+        p:nth-of-type(1){
+            font-size: 0.18rem;
+            height: 0.5rem;
+            line-height: 0.6rem;
+            font-weight: bold;
+            border-bottom: 1px solid gainsboro;
+        }
+        ul{
+            margin: 0.15rem 0 0.15rem 0;
+        }
+        p:nth-of-type(2){
+            margin: 0.15rem 0 0.15rem 0;
+        }
+        p,ul>li{
+            font-size: 0.15rem;
+        }
+    }
+    
+    .setPass,.personhead,.personhead1,.personhead2{
+        height: 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.15rem;
+        border-bottom: 1px solid gainsboro;
+        background: white;
+        color: black;
+        input{
+            border: none;
+            outline: none;
+            padding: 0.1rem;
+            width: 70%;
+        }
+        input::-webkit-input-placeholder{
+            font-size: 0.18rem;
+        }
+        span{
+           font-size: 0.15rem;
+        }
+        .friend{
+            font-size: 0.18rem;
+        }
+    }
+    
+    .goOut{
+        text-align: center;
+        font-size: 0.18rem;
+        margin-top: 0.39rem;
+        padding: 0.1rem 0;
+        background: white;
+        color: #64D1C0;
+    }
+  .text_area{
+      width: 100%;
+      height: 0.9rem;
+      background: white;
+      position: relative;
+      textarea{
+          width: 3.1rem;
+          height: 1rem;
+          border: none;
+          outline: none;
+          font-size: 0.18rem;
+          resize: none;
+          color: #5C5C5C;
+      }
+      span{
+          position: absolute;
+          color: gray;
+          right: 0.38rem;
+          top: 0.08rem;
+      }
+  }
+  .exceed{
+      width: 100%;
+      position: absolute;
+      font-size: 0.16rem;
+      color: gainsboro;
+      background: white;
+  }
+  
+  .personhead{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span:nth-of-type(2){
+          display: flex;
+          justify-content: space-around;
+          align-content: center;
+          font-size: 0.3rem;
+        img{
+            width: 0.35rem;
+            height: 0.35rem;
+        }
+        i{
+            margin-top: 0.1rem;
+            color: #A0A0A0;
+            margin-right: 0.25rem;
+            margin-left: 0.2rem;
+            font-size: 0.15rem;
+        }
+      }
+  }
+  .personhead1,.personhead2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span:nth-of-type(1){
+          font-size: 0.15rem;
+      }
+       span:nth-of-type(2){
+          font-size: 0.15rem;
+          color: #A0A0A0;
+      }
+  }
+  .personhead2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span:nth-of-type(2){
+          padding: 0.02rem;
+          border: 1px solid #F682C0;
+          border-radius: 0.15rem;
+          
+          img{
+              width: 0.2rem;
+              height: 0.2rem;
+              margin:0 0.11rem;
+          }
+          span{
+              margin-right: 0.1rem;
+          }
+      }
+  }
+  .hubtable{
+      border: none;
+      tr{
+         background: white;
+        display: flex;
+        justify-content: space-around; 
+        font-size: 0.12rem;
+        padding: 0.1rem;
+
+        td{
+            background: white;
+        }
+        td:nth-of-type(3){
+            color: #34C5B1;
+        }
+      }
+      tr:nth-of-type(1){
+          background: #F7F7F7;
+          font-size: 0.18rem;
+      }
+  }
+}
+
+.changeName_inp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    input{
+        width: 80%;
+        border: none;
+        outline: none;
+        padding: 0.3rem;
+        margin-left: 9%;
+        font-size: 0.16rem;
+    }
+    span{
+        width: 10%;
+       color: gray;
+    }
+}
+#Myexercise{
+    .table{
+        border: none;
+        td:nth-of-type(4){
+            color: #34C5B1;
+        }
+        tr{
+            background: white;
+            display: flex;
+            justify-content: space-around; 
+            font-size: 0.12rem;
+            padding: 0.1rem;
+        td{
+            background: white;
+        }
+      }
+      tr:nth-of-type(1){
+          background: #F7F7F7;
+          font-size: 0.18rem;
+          color: #5E5E5E;
+      }
+    }
+}
+.wrap{
+    #tab_t{
+        background: #202833;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 0.18rem;
+        padding: 0.05rem;
+        li{
+            width: 50%;
+        }
+        li:hover{
+            color: #05B8A0;
+            border-bottom: 1px solid #05B8A0;
+        }
+    }
+    #tab_c{
+        width: 100%;
+        .table{
+            border: none;
+            td:nth-of-type(4){
+                color: #34C5B1;
+            }
+            tr{
+                background: white;
+                display: flex;
+                justify-content: space-around; 
+                font-size: 0.12rem;
+                padding: 0.1rem;
+            td{
+                background: white;
+            }
+          }
+          tr:nth-of-type(1){
+              background: #F7F7F7;
+              font-size: 0.14rem;
+              color: #5E5E5E;
+          }
+        }
+        .hide{
+            display: none;
+        }
+    }
+}

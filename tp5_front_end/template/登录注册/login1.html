@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/Login/login1.css"/>
+	<title>Document</title>
+</head>
+<body>
+	<div class="logo1">
+		<img src="../../image/xc.png"/>
+		<span>广告语</span>
+	</div>
+	<form action="" id="from_login1">
+		<div class="phone_number">
+		<img src="../../image/0a1927bade086b5d4a6c1f58bd29376.png"/>
+		<input class="phone" type="text" name="phone" id="username" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入您的手机号"/>
+		</div>
+
+		<div class="pass">
+			<img src="../../image/pass.png"/>
+			<input class="pass_input" name="pass" type="password" placeholder="请输入您的密码" id="password" />
+			<img class="glasses" src="../../image/ckpass.png"/>
+		</div>
+		<input type="button" value="登录" class="submit"/>
+	</form>
+	<p class="wjpass">忘记密码？</p>
+	<div class="loding">
+		<div>
+			<img src="../../image/loding1.jpg" alt="">
+		</div>
+		<div>
+			<img src="../../image/loding.png" alt="">
+		</div>
+		<div>
+			<img src="../../image/loding.jpg" alt="">
+		</div>
+	</div>
+	<script src="../../js/adaptationZ.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/http.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/nc.js"></script>
+	<script type="text/javascript">
+		$(".glasses").click(function(){
+			if($(".pass_input").attr("type")=="password"){
+				$(".pass_input").attr("type","text");
+				$(".glasses").attr("src","../image/chanPass.png")
+			}else if($(".pass_input").attr("type")=="text"){
+				$(".glasses").attr("src","../image/ckpass.png");
+				$(".pass_input").attr("type","password");
+			}
+		});
+
+		$(".submit").click(function () {
+		   var pass= $(".pass_input").val();
+           var phone= $(".phone").val();
+            var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+            if(phone == "" || phone.replace(/\s/g,"").length==0||!myreg.test(phone)){
+                alert("请填写正确的手机号");
+                return;
+            }  if(pass == "" || pass.replace(/\s/g,"").length==0){
+                alert("请填写密码");
+                return;
+            }
+            $.ajax({
+			    type:'post',
+				url:http+'index.php?s=/index/Login/userLogin',
+				data:{
+			        username:phone,
+                    password:pass
+				},
+				dataType : 'json',
+                cache:false,
+				success:function (data) {
+                    var id = data.date.id;
+                    console.log(data);
+			        if(data.code!=200){
+			            alert(data.msg);
+					} else {
+                       if (data.date.status ==1){
+                           window.location.href='material.html?id='+id;
+                       }else if (data.date.status ==2){
+                           //缓存信息
+						   localStorage.setItem("phone",$(".phone").val());
+						   localStorage.setItem("pass",$(".pass_input").val());
+						   //登录成功时候的过渡页。
+                           setInterval(function () {
+							   $(".loding").css("display","block");
+							   go()
+                           },1000);
+                           var x = 3;
+						   function go() {
+						       x--;
+						       console.log(id)
+						       if (x==0){
+                                   window.location.href = "home.html?id="+id;
+                               }
+                           }
+					   }
+                    }
+                }
+			})
+        })
+
+	</script>
+</body>
+</html>

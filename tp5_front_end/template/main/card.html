@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/card.css"/>
+		<link rel="stylesheet" type="text/css" href="../../js/bootstrap/css/bootstrap.css"/>
+		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<title>身份认证</title>
+	</head>
+	<body>
+		<div id="systemnotice">
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>身份认证</span>
+				<span></span>
+			</header>
+			
+			
+			<!--认证部分-->
+			<section>
+				<div class="password">
+						<span>真实姓名</span>
+						<input type="text" placeholder="请输入您的真实姓名"/>
+					</div>
+					<div class="password">
+						<span>证件类型</span>
+						<input type="text" value="身份证" readonly="readonly"/>
+					</div>
+					<div class="password">
+						<span>证件号码</span>
+						<input type="text" placeholder="请输入您的证件号码"/>
+					</div>
+					<div class="password">
+						<span>证件照片</span>
+						<input type="text" placeholder="大小不得超过3M"/>
+					</div>
+			</section>
+			
+			
+			<!--脚部照片-->
+			<footer class="foot">
+				<div><img src="../../image/persol-center/zhengmian@2x.png"/></div>
+				<div><img src="../../image/persol-center/fanmian@2x.png"/></div>
+				
+			</footer>
+		</div>
+	</body>
+	<script>
+	//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	  	
+	</script>
+</html>

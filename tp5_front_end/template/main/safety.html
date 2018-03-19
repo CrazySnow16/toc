@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/sayety.css"/>
+		<link rel="stylesheet" type="text/css" href="../../js/bootstrap/css/bootstrap.css"/>
+		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<title>安全认证</title>
+	</head>
+	<body>
+		<div id="systemnotice">
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>安全认证</span>
+				<span></span>
+			</header>
+			
+			<!--内容部分    头像-->
+			<div class="savehead">
+				<span><img src="../../image/persol-center/组-10@2x.png"/></span>
+				<div class="ullist">
+					<ul>
+						<li>
+							<span class="glyphicon glyphicon-user"></span>
+							<b>周杰伦</b>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-user"></span>
+							<b><u>待认证</u></b>
+						</li>
+					</ul>
+					<div>
+						<img src="../../image/persol-center1/组-2@2x.png"/>
+					</div>
+				</div>
+			</div>
+			
+			<!--认证部分-->
+			<footer>
+				
+				<div class="password">
+						<span>身份认证</span>
+						<span>未认证</span>
+					</div>
+					<div class="password">
+						<span>手机认证</span>
+						<span>未认证</span>
+					</div>
+					<div class="password">
+						<span>邮箱认证</span>
+						<span>未认证</span>
+					</div>
+					<div class="password">
+						<span>支付宝/银行卡绑定</span>
+						<span>未认证</span>
+					</div>
+			</footer>
+			
+		</div>
+	</body>
+	<script>
+	//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	  
+	</script>
+</html>

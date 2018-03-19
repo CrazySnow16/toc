@@ -1,0 +1,1 @@
+var http='http://39.106.60.44/default/sss/zerg/public/'

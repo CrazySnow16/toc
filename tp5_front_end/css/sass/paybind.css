@@ -1,0 +1,68 @@
+.updateplaceimg{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	padding-bottom: 0.25rem;
+	border-bottom: 0.1rem solid #F7F7F7;
+}
+
+.password{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 0.02rem solid #F7F7F7;
+	text-align: center;
+	background: white;
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+.password>span{
+	width: 40%;
+	font-size: 0.18rem;
+	color: #AAAAAA;
+}
+.password>input{
+	width: 60%;
+	border: none;
+	padding: 0.1rem;
+	font-size: 0.18rem;
+}
+.password>input::-webkit-input-placeholder{
+	font-size: 0.16rem;
+}
+
+.truebtn{
+	width: 60%;
+	padding: 0.1rem;
+	background: #03BFA6;
+	color: white;
+	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+	font-size: 0.18rem;
+	border-radius: 0.4rem;
+	margin-top: 1rem;
+}
+
+.password>div{
+	position: absolute;
+	right: 5%;
+}
+.password>div>button{
+	border: none;
+}
+.dropdown-menu{
+	min-width: 0.5rem !important;	
+	left: -0.3rem !important;
+}
+.btn-group > .btn:first-child {
+	margin-top: 0.05rem;
+}
+.hint{
+	color: #03BFA6;
+	font-size: 0.13rem;
+	margin-left: 0.4rem;
+	position: relative;
+	top: 0.1rem;
+}

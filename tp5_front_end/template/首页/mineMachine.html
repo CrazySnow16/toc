@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/home/mineMachine.css"/>
+    <script src="../../js/adaptationZ.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+    <title>购买矿机</title>
+</head>
+<body>
+    <header>
+        <span>购买矿机</span>
+		<a href="" onclick="javascript:history.back(-1);">
+			<img src="../../image/block_jt.png" alt="">
+		</a>
+    </header>
+    <div class="box_kj">
+    	<div>
+    		<div class="kuangJi">
+    		</div>
+    		<div class="kuaj">
+    			<span>10G矿机</span>
+    			<p class="chuanLiang"><span>预计产量：</span><span>12 &nbsp;TOC</span></p>
+    			<p class="yongJian">雇佣价：<span>10&nbsp;TOC</span></p>
+    			<div class="jiaJian">
+    				使用寿命：<span>30</span>天
+    			</div>
+    			<div class="inpu_but">
+    				<div>
+    					<button class="reduce">—</button>
+    					<input type="number" value="0"/>
+    					<button class="plus">+</button>
+    				</div>
+					<div>限购<span>5</span>个</div>
+    			</div>
+    		</div>
+    		<div class="maiRu">
+    			<button>买入</button>
+    		</div>
+    	</div>
+    </div>
+	<div class="box_kj">
+		<div>
+			<div class="kuangJi">
+			</div>
+			<div class="kuaj">
+				<span>10G矿机</span>
+				<p class="chuanLiang"><span>预计产量：</span><span>12 &nbsp;TOC</span></p>
+				<p class="yongJian">雇佣价：<span>10&nbsp;TOC</span></p>
+				<div class="jiaJian">
+					使用寿命：<span>30</span>天
+				</div>
+				<div class="inpu_but">
+					<div>
+						<button class="reduce">—</button>
+						<input type="number" value="0"/>
+						<button class="plus">+</button>
+					</div>
+					<div>限购<span>5</span>个</div>
+				</div>
+			</div>
+			<div class="maiRu">
+				<button>买入</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".plus").click(function () {
+			var a = $(this).siblings("input").val();
+			a++;
+            $(this).siblings("input").val(a);
+        });
+        $(".reduce").click(function () {
+            var a = $(this).siblings("input").val();
+            if (a<=0){
+                alert("不能小于0")
+			}else{
+                a--;
+			}
+            $(this).siblings("input").val(a);
+        });
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/jquery-3.1.1.min.js"></script>
+		<script src="../../js/adaptationZ.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/ty.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sass/serverli.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css"/>
+		<title>我的行权</title>
+	</head>
+	<body>
+		<div id="Myexercise">
+			<header>
+				<span class="iconfont icon-fanhui" onclick="goback()"></span>
+				<span>我的行权</span>
+				<span></span>
+			</header>
+			<table width="100%" align="center" class="table">
+			 	<tr>
+			 		<th>名称/代码</th>
+			 		<th>消费时间</th>
+			 		<th>约单时间</th>
+			 		<th>状态<i class="iconfont icon-dianpu1"></i></th>
+			 	</tr>
+			 	<tr>
+			 		<td>1131</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 		<td>0.20000</td>
+			 	</tr>
+			 	<tr>
+			 		<td>1121</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 		<td>0.20000</td>
+			 	</tr>
+			 	<tr>
+			 		<td>1131</td>
+			 		<td>2018-2-5</td>
+			 		<td>0.20000</td>
+			 		<td>0.20000</td>
+			 	</tr>
+			 </table>
+		</div>
+	</body>
+	<script>
+	//返回上一层
+	    function goback(){
+			location.href=history.go(-1)
+		}
+	</script>
+</html>
